@@ -3,7 +3,11 @@ body, ul, li, a, img {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    width: fit-content;
+}
+
+img, ul, li, body, header, nav, footer, div {
+    max-width: 100%;
+
 }
 
 :root{
