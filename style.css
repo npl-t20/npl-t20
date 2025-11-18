@@ -1,0 +1,163 @@
+/* General Reset */
+body, ul, li, a, img {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: fit-content;
+}
+
+:root{
+    --box-shadow: -5px 5px 10px 5px rgba(128, 128, 128, 0.9);
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #002366;
+    color: white;
+    font-family: Arial, sans-serif;
+    flex-wrap: wrap;
+}
+
+/* Logo Section */
+.logo img {
+    height: 50px;
+    margin-left: 12px;
+}
+
+/* Follow Us Section */
+.follow-us {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-right: 2px;
+    
+}
+
+.follow-us a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    width: 40px;
+    height: 40px;
+    background-color: white; /* Background to improve visibility */
+    border-radius: 50%; /* Circular icons */
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.follow-us h4{
+    display: flex;
+    font-size: 15px;
+}
+
+.follow-us a:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* More prominent shadow on hover */
+}
+
+/* Navbar Section */
+.navbar {
+    background-color: #dc143c; /* Crimson Red Background */
+    padding: 10px 0;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    /* top: 10%; */
+    margin-top: 0px;
+    flex-wrap: wrap;
+    
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Space between menu items */
+}
+
+.navbar ul li {
+    text-transform: uppercase;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #ffd700; /* Golden hover effect */
+}
+
+ .image-container img{
+        flex-wrap: wrap;
+        width: 100%;
+        height: auto;
+    }
+
+/* Footer Section  */
+
+.footer{
+    background-color: #e4b3b0;
+    font-size: 16px;
+    padding: 12px;
+    text-align: center;
+    margin-top: 24px;
+}
+
+/* Responsive Design for Mobile (Up to 760px) */
+@media (max-width: 760px) {
+    /* Header Section */
+    .header {
+        flex-wrap: wrap;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .logo img {
+        height: 40px;
+        margin: 0 auto;
+    }
+
+    .follow-us {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .follow-us h4 {
+        font-size: 14px;
+    }
+
+    .follow-us a {
+        width: 35px;
+        height: 35px;
+    }
+
+    /* Navbar Section */
+    .navbar ul {
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .navbar ul li a {
+        font-size: 14px;
+    }
+
+    /* Image Container */
+    .image-container img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Footer Section */
+    .footer {
+        font-size: 18px;
+    }
+}
