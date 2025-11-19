@@ -1,4 +1,6 @@
-/* General Reset */
+/* ============================================================
+   GLOBAL RESET & BASE SETUP
+   ============================================================ */
 body, ul, li, a, img {
     margin: 0;
     padding: 0;
@@ -7,14 +9,17 @@ body, ul, li, a, img {
 
 img, ul, li, body, header, nav, footer, div {
     max-width: 100%;
-
 }
 
-:root{
+:root {
     --box-shadow: -5px 5px 10px 5px rgba(128, 128, 128, 0.9);
 }
 
-/* Header Section */
+/* ============================================================
+   HEADER SECTION
+   Contains: Logo + Follow Us Section
+   ============================================================ */
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -26,21 +31,28 @@ img, ul, li, body, header, nav, footer, div {
     flex-wrap: wrap;
 }
 
-/* Logo Section */
+/* Logo image */
 .logo img {
     height: 50px;
     margin-left: 12px;
 }
 
-/* Follow Us Section */
+/* ------------------------------------------------------------
+   FOLLOW US SECTION (Same style for all devices)
+   ------------------------------------------------------------ */
 .follow-us {
     display: flex;
     align-items: center;
     gap: 15px;
     margin-right: 2px;
-    
 }
 
+.follow-us h4 {
+    font-size: 15px;
+    display: flex;
+}
+
+/* Social media icon style */
 .follow-us a {
     display: flex;
     align-items: center;
@@ -48,39 +60,35 @@ img, ul, li, body, header, nav, footer, div {
     margin-right: 12px;
     width: 40px;
     height: 40px;
-    background-color: white; /* Background to improve visibility */
-    border-radius: 50%; /* Circular icons */
+    background-color: white;
+    border-radius: 50%;
     text-decoration: none;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.follow-us h4{
-    display: flex;
-    font-size: 15px;
-}
-
+/* Hover animation */
 .follow-us a:hover {
-    transform: scale(1.1); /* Slightly enlarge on hover */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* More prominent shadow on hover */
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Navbar Section */
+/* ============================================================
+   NAVBAR SECTION
+   ============================================================ */
+
 .navbar {
-    background-color: #dc143c; /* Crimson Red Background */
+    background-color: #dc143c;
     padding: 10px 0;
     width: 100%;
-    justify-content: center;
     display: flex;
-    /* top: 10%; */
-    margin-top: 0px;
+    justify-content: center;
     flex-wrap: wrap;
-    
 }
 
 .navbar ul {
     list-style: none;
     display: flex;
-    gap: 20px; /* Space between menu items */
+    gap: 20px;
 }
 
 .navbar ul li {
@@ -95,19 +103,25 @@ img, ul, li, body, header, nav, footer, div {
     transition: color 0.3s;
 }
 
+/* Navbar hover effect */
 .navbar ul li a:hover {
-    color: #ffd700; /* Golden hover effect */
+    color: #ffd700;
 }
 
- .image-container img{
-        flex-wrap: wrap;
-        width: 100%;
-        height: auto;
-    }
+/* ============================================================
+   IMAGE BANNER / MAIN IMAGE
+   ============================================================ */
 
-/* Footer Section  */
+.image-container img {
+    width: 100%;
+    height: auto;
+}
 
-.footer{
+/* ============================================================
+   FOOTER SECTION
+   ============================================================ */
+
+.footer {
     background-color: #e4b3b0;
     font-size: 16px;
     padding: 12px;
@@ -115,35 +129,27 @@ img, ul, li, body, header, nav, footer, div {
     margin-top: 24px;
 }
 
-/* Responsive Design for Mobile (Up to 760px) */
+/* ============================================================
+   RESPONSIVE DESIGN — MOBILE (MAX 760px)
+   We removed all Follow Us overrides so it stays SAME.
+   ============================================================ */
+
 @media (max-width: 760px) {
-    /* Header Section */
+
+    /* Adjust header alignment */
     .header {
         flex-wrap: wrap;
         text-align: center;
         padding: 10px;
     }
 
+    /* Smaller logo on phones */
     .logo img {
         height: 40px;
         margin: 0 auto;
     }
 
-    .follow-us {
-        justify-content: center;
-        margin-top: 10px;
-    }
-
-    .follow-us h4 {
-        font-size: 14px;
-    }
-
-    .follow-us a {
-        width: 35px;
-        height: 35px;
-    }
-
-    /* Navbar Section */
+    /* Navbar adjustments */
     .navbar ul {
         flex-wrap: wrap;
         gap: 10px;
@@ -154,14 +160,111 @@ img, ul, li, body, header, nav, footer, div {
         font-size: 14px;
     }
 
-    /* Image Container */
+    /* Allow images to scale properly */
     .image-container img {
         width: 100%;
         height: auto;
     }
 
-    /* Footer Section */
+    /* Footer stays same */
     .footer {
         font-size: 16px;
+    }
+}
+
+/* ============================================================
+   EXTRA BREAKPOINTS — SMALL PHONES (Max 480px)
+   ============================================================ */
+
+@media (max-width: 480px) {
+
+    .header {
+        padding: 8px 10px;
+    }
+
+    .logo img {
+        height: 32px;
+    }
+
+    /* Navbar smaller text */
+    .navbar ul li a {
+        font-size: 12px;
+    }
+
+    .navbar ul {
+        gap: 6px;
+    }
+
+    /* Footer smaller text */
+    .footer {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* ============================================================
+   TABLETS (761px – 1024px)
+   ============================================================ */
+
+@media (min-width: 761px) and (max-width: 1024px) {
+
+    .header {
+        padding: 12px 30px;
+    }
+
+    .logo img {
+        height: 48px;
+    }
+
+    .navbar ul {
+        gap: 16px;
+    }
+
+    .navbar ul li a {
+        font-size: 16px;
+    }
+}
+
+/* ============================================================
+   MEDIUM DESKTOPS (1025px – 1439px)
+   ============================================================ */
+
+@media (min-width: 1025px) and (max-width: 1439px) {
+
+    .header {
+        padding: 12px 60px;
+    }
+
+    .navbar {
+        padding: 12px 0;
+    }
+
+    .navbar ul {
+        gap: 24px;
+    }
+}
+
+/* ============================================================
+   LARGE DESKTOPS (1440px+)
+   Center layout & maintain spacing
+   ============================================================ */
+
+@media (min-width: 1440px) {
+
+    body {
+        margin: 0 auto;
+        max-width: 1440px;
+    }
+
+    .header {
+        padding: 16px 80px;
+    }
+
+    .navbar ul {
+        gap: 30px;
+    }
+
+    .navbar ul li a {
+        font-size: 18px;
     }
 }
