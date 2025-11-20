@@ -268,3 +268,63 @@ img, ul, li, body, header, nav, footer, div {
         font-size: 18px;
     }
 }
+
+/* Chat Button */
+.chat-button {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    background: #007bff;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease;
+    z-index: 9999;
+}
+
+.chat-button:hover {
+    transform: scale(1.1);
+}
+
+/* ============================================================
+   Chat box popup and animation
+   ============================================================ */
+.chat-popup {
+    position: fixed;
+    bottom: 100px;
+    right: 25px;
+    width: 300px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    padding: 15px;
+    display: none;
+    z-index: 9999;
+    font-family: Arial, sans-serif;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.chat-header {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
