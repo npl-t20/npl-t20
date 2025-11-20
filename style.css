@@ -465,7 +465,6 @@ body {
     font-family: Arial, sans-serif;
     background: #f5f7fb;
     margin: 0;
-    padding: 24px;
     color: #222;
 }
 
@@ -525,8 +524,5 @@ h1 {
     .teams {
         flex-direction: column;
         gap: 6px;
-    }
-    .vs {
-        display: none;
     }
 }
