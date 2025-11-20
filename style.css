@@ -7,8 +7,9 @@ body, ul, li, a, img {
     box-sizing: border-box;
 }
 
-img, ul, li, body, header, nav, footer, div {
+img {
     max-width: 100%;
+    height: auto;
 }
 
 /* Make body stretch full height for sticky footer */
