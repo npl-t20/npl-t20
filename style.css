@@ -526,7 +526,4 @@ h1 {
         flex-direction: column;
         gap: 6px;
     }
-    .vs {
-        display: none;
-    }
 }
