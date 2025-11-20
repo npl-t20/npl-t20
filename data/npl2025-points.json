@@ -1,0 +1,90 @@
+[
+  {
+    "rank": 1,
+    "team": "Biratnagar Kings",
+    "shortName": "BIK",
+    "matches": 1,
+    "wins": 1,
+    "losses": 0,
+    "nr": 0,
+    "points": 2,
+    "nrr": "+2.650"
+  },
+  {
+    "rank": 2,
+    "team": "Sudurpaschim Royals",
+    "shortName": "SPR",
+    "matches": 1,
+    "wins": 1,
+    "losses": 0,
+    "nr": 0,
+    "points": 2,
+    "nrr": "+1.450"
+  },
+  {
+    "rank": 3,
+    "team": "Lumbini Lions",
+    "shortName": "LUL",
+    "matches": 1,
+    "wins": 1,
+    "losses": 0,
+    "nr": 0,
+    "points": 2,
+    "nrr": "+0.254"
+  },
+  {
+    "rank": 4,
+    "team": "Chitwan Rhinos",
+    "shortName": "CHR",
+    "matches": 2,
+    "wins": 1,
+    "losses": 1,
+    "nr": 0,
+    "points": 2,
+    "nrr": "+0.222"
+  },
+  {
+    "rank": 5,
+    "team": "Kathmandu Gorkhas",
+    "shortName": "KAG",
+    "matches": 2,
+    "wins": 1,
+    "losses": 1,
+    "nr": 0,
+    "points": 2,
+    "nrr": "-0.372"
+  },
+  {
+    "rank": 6,
+    "team": "Karnali Yaks",
+    "shortName": "KAY",
+    "matches": 1,
+    "wins": 0,
+    "losses": 1,
+    "nr": 0,
+    "points": 0,
+    "nrr": "-0.622"
+  },
+  {
+    "rank": 7,
+    "team": "Janakpur Bolts",
+    "shortName": "JAB",
+    "matches": 1,
+    "wins": 0,
+    "losses": 1,
+    "nr": 0,
+    "points": 0,
+    "nrr": "-0.778"
+  },
+  {
+    "rank": 8,
+    "team": "Pokhara Avengers",
+    "shortName": "POA",
+    "matches": 1,
+    "wins": 0,
+    "losses": 1,
+    "nr": 0,
+    "points": 0,
+    "nrr": "-2.650"
+  }
+]
