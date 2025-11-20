@@ -11,6 +11,17 @@ img, ul, li, body, header, nav, footer, div {
     max-width: 100%;
 }
 
+/* Make body stretch full height for sticky footer */
+html, body {
+    height: 100%;
+}
+
+/* Enable sticky footer layout */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
 :root {
     --box-shadow: -5px 5px 10px 5px rgba(128, 128, 128, 0.9);
 }
@@ -118,7 +129,7 @@ img, ul, li, body, header, nav, footer, div {
 }
 
 /* ============================================================
-   FOOTER SECTION
+   FOOTER SECTION — STICKY FOOTER (NO OVERLAY)
    ============================================================ */
 
 .footer {
@@ -126,12 +137,11 @@ img, ul, li, body, header, nav, footer, div {
     font-size: 16px;
     padding: 12px;
     text-align: center;
-    margin-top: 24px;
+    margin-top: auto; /* Pushes footer to bottom */
 }
 
 /* ============================================================
    RESPONSIVE DESIGN — MOBILE (MAX 760px)
-   We removed all Follow Us overrides so it stays SAME.
    ============================================================ */
 
 @media (max-width: 760px) {
@@ -293,9 +303,7 @@ img, ul, li, body, header, nav, footer, div {
     transform: scale(1.1);
 }
 
-/* ============================================================
-   Chat box popup and animation
-   ============================================================ */
+/* Chat popup */
 .chat-popup {
     position: fixed;
     bottom: 100px;
@@ -312,14 +320,8 @@ img, ul, li, body, header, nav, footer, div {
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 
 .chat-header {
@@ -327,4 +329,3 @@ img, ul, li, body, header, nav, footer, div {
     font-weight: bold;
     margin-bottom: 10px;
 }
-
