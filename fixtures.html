@@ -46,70 +46,39 @@
     </nav>
 
         <!--fixtures table-->
-<div class="container">
-    <div class="match-box">
-        <h2>Match 1</h2>
-        <div class="teams">
-            <div class="team">JANAKPUR BOLTS</div>
-            <div class="vs">VS</div>
-            <div class="team">KATHMANDU GORKHAS</div>
-        </div>
-    </div>
+    <!-- MAIN CONTENT: POINTS TABLE -->
+    <main class="main-content">
+        <section class="points-section">
+            <h1 class="points-title">Nepal Premier League 2025 – Fixtures</h1>
+            <p class="points-subtitle">
+                <!-- Standings for NPL Season 2 (updated from local data file). -->
+            </p>
 
-    <div class="match-box">
-        <h2>Match 2</h2>
-        <div class="teams">
-            <div class="team">LUMBINI LIONS</div>
-            <div class="vs">VS</div>
-            <div class="team">SUDURPASHIM ROYALS</div>
-        </div>
-    </div>
+            <div class="points-table-wrapper">
+                <table class="points-table">
+                    <thead>
+                        <tr>
+                            <th>DATE</th>
+                            <th>MATCH</th>
+                            <th>Team A</th>
+                            <th>-</th>
+                            <th>Team B</th>
+                            <th>RESULT</th>
+                        </tr>
+                    </thead>
+                    <tbody id="points-body">
+                        <!-- Rows will be injected by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
 
-    <div class="match-box">
-        <h2>Match 3</h2>
-        <div class="teams">
-            <div class="team">BIRATNAGAR KINGS</div>
-            <div class="vs">VS</div>
-            <div class="team">CHITWAN ROYALS</div>
-        </div>
-    </div>
+            <p id="points-loading" class="points-message">Loading points table...</p>
+            <p id="points-error" class="points-message error-message" style="display: none;">
+                Could not load points table. Please try again later.
+            </p>
+        </section>
+    </main>
 
-    <div class="match-box">
-        <h2>Match 4</h2>
-        <div class="teams">
-            <div class="team">POKHARA AVENGERS</div>
-            <div class="vs">VS</div>
-            <div class="team">KARNALI YAKS</div>
-        </div>
-    </div>
-
-        <div class="match-box">
-        <h2>Match 5</h2>
-        <div class="teams">
-            <div class="team">CHITWAN RHINOS</div>
-            <div class="vs">VS</div>
-            <div class="team">LUMBINI LIONS</div>
-        </div>
-    </div>
-
-        <div class="match-box">
-        <h2>Match 6</h2>
-        <div class="teams">
-            <div class="team">POKHARA AVENGERS</div>
-            <div class="vs">VS</div>
-            <div class="team">SUDHURPACHIM ROYALS</div>
-        </div>
-    </div>
-
-        <div class="match-box">
-        <h2>Match 7</h2>
-        <div class="teams">
-            <div class="team">KARNALI YAKS</div>
-            <div class="vs">VS</div>
-            <div class="team">LUMBINI LIONS</div>
-        </div>
-    </div>
-</div>
 
 
     <!-- Footer Section  -->
@@ -133,6 +102,64 @@
         const box = document.getElementById("chatBox");
         box.style.display = (box.style.display === "block") ? "none" : "block";
     }
+    </script>
+
+    <script>
+        function toggleChat() {
+            const box = document.getElementById("chatBox");
+            box.style.display = (box.style.display === "block") ? "none" : "block";
+        }
+
+        // Load Season 2 points table from local JSON
+        async function loadPointsTable() {
+            const tbody = document.getElementById("points-body");
+            const loadingMsg = document.getElementById("points-loading");
+            const errorMsg = document.getElementById("points-error");
+
+            loadingMsg.style.display = "block";
+            errorMsg.style.display = "none";
+            tbody.innerHTML = "";
+
+            try {
+                // IMPORTANT: this path must match folder structure
+                const response = await fetch("data/npl2025-fixtures.json");
+
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+
+                const data = await response.json();
+
+                loadingMsg.style.display = "none";
+
+                if (!Array.isArray(data) || data.length === 0) {
+                    errorMsg.textContent = "No points data available right now.";
+                    errorMsg.style.display = "block";
+                    return;
+                }
+
+                data.forEach(team => {
+                    const tr = document.createElement("tr");
+
+                    tr.innerHTML = `
+                        <td>${team.date}</td>
+                        <td>${team.match}</td>
+                        <td>${team.teama}</td>
+                        <td>${team.round}</td>
+                        <td>${team.teamb}</td>
+                        <td>${team.result}</td>
+                    `;
+
+                    tbody.appendChild(tr);
+                });
+            } catch (err) {
+                console.error("Failed to load points table:", err);
+                loadingMsg.style.display = "none";
+                errorMsg.style.display = "block";
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", loadPointsTable);
     </script>
 
 
