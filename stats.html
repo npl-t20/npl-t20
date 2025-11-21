@@ -2,42 +2,76 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-        <title>Nepal Premier League</title>
-
+    <title>Nepal Premier League</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Font Awesome -->
-    <!-- https://fontawesome.com/search  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer">
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+
     <link rel="shortcut icon" type="image/png" href="assets/NPLLogo.jpg">
     <link rel="stylesheet" href="style.css">
-    
+
+    <style>
+        body {
+            background: lightgray;
+            font-family: Arial, sans-serif;
+        }
+
+        .stats-container {
+            width: 90%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            color: darkred;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            border: 1px solid gray;
+            padding: 10px;
+        }
+
+        th {
+            background: black;
+            color: white;
+        }
+
+        .player-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    </style>
 </head>
 <body>
     <!-- Header Section -->
     <header class="header">
-        <!-- Logo -->
         <div class="logo">
             <a href="index.html"><img src="assets/NPLLogo.jpg" alt="Logo"></a>
         </div>
-        <!-- Follow Us Section -->
         <div class="follow-us">
             <h4>Follow us</h4>
-            <a href="https://www.instagram.com/officialnplt20/profilecard/?igsh=MWQ4YmhiY3pjMWt4YQ==" target="_blank">
-                <i class="fa-brands fa-instagram"></i></a>
-            <a href="https://youtube.com/@officialnplt20?si=GuzBCHmQbulXNwYh" target="_blank">
-                <i class="fa-brands fa-youtube"></i></a>
-                <a href="https://www.facebook.com/OfficialNPLT20?mibextid=LQQJ4d" target="_blank">
-                    <i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/officialnplt20/profilecard/?igsh=MWQ4YmhiY3pjMWt4YQ==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://youtube.com/@officialnplt20?si=GuzBCHmQbulXNwYh" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.facebook.com/OfficialNPLT20?mibextid=LQQJ4d" target="_blank"><i class="fa-brands fa-facebook"></i></a>
         </div>
     </header>
 
     <!-- Navbar Section -->
     <nav class="navbar">
-        <ul >
+        <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="fixtures.html">Fixtures</a></li>
             <li><a href="pointstable.html">Points Table</a></li>
@@ -46,14 +80,130 @@
         </ul>
     </nav>
 
-    statistics
+    <!-- Stats Section -->
+    <div class="stats-container">
+        <h1 style="text-align:center; color:navy;">Cricket Stats Dashboard</h1>
 
-    <!-- Footer Section  -->
-        <footer class="footer">
-            &copy;Copy rights all reserved. By ERAA4IT!
-          </footer>
+              <h2>Total Team Runs and Boundaries</h2>
+        <table>
+            <tr>
+                <th>Team</th><th>Fours</th><th>Sixes</th><th>Total Boundaries</th><th>Total Runs</th>
+            </tr>
+            <tr>
+                <td>Team A</td><td>220</td><td>110</td><td>330</td><td>330</td>
+            </tr>
+            <tr>
+                <td>Team B</td><td>220</td><td>110</td><td>330</td><td>330</td>
+            </tr>
+            <tr>
+                <td>Team C</td><td>220</td><td>110</td><td>330</td><td>330</td>
+            </tr>
+            <tr>
+                <td>Team D</td><td>220</td><td>110</td><td>330</td><td>330</td>
+            </tr>
+            <tr>
+                <td>Team E</td><td>220</td><td>110</td><td>330</td><td>330</td>
+            </tr>
+            <tr>
+                <td>Team F</td><td>220</td><td>110</td><td>330</td><td>330</td>
+            </tr>
+            <tr>
+                <td>Team G</td><td>220</td><td>110</td><td>330</td><td>330</td>
+            </tr>
+            <tr>
+                <td>Team H</td><td>220</td><td>110</td><td>330</td><td>330</td>
+            </tr>
+        </table>
+        
+        <h2>Top 5 Highest Wicket Takers</h2>
+        <table>
+            <tr>
+                <th>Photo</th><th>Player Name</th><th>Team</th><th>Wickets</th>
+            </tr>
+            <tr>
+                <td><img src="player1.jpg" class="player-img"></td><td>Player 1</td><td>Team A</td><td>120</td>
+            </tr>
+            <tr>
+                <td><img src="player2.jpg" class="player-img"></td><td>Player 2</td><td>Team B</td><td>120</td>
+            </tr><tr>
+                <td><img src="player3.jpg" class="player-img"></td><td>Player 3</td><td>Team C</td><td>120</td>
+            </tr><tr>
+                <td><img src="player4.jpg" class="player-img"></td><td>Player 4</td><td>Team D</td><td>120</td>
+            </tr><tr>
+                <td><img src="player5.jpg" class="player-img"></td><td>Player 5</td><td>Team E</td><td>120</td>
+            </tr>
+        </table>
 
-          <!-- Chat Popup Box -->
+        <h2>Top 5 Highest Run Scorers</h2>
+        <table>
+            <tr>
+                <th>Photo</th><th>Player Name</th><th>Team</th><th>Runs</th>
+            </tr>
+                <td><img src="player1.jpg" class="player-img"></td><td>Player 1</td><td>Team A</td><td>980</td>
+            </tr>
+            <tr>
+                <td><img src="player2.jpg" class="player-img"></td><td>Player 2</td><td>Team B</td><td>980</td>
+            </tr>
+            <tr>
+                <td><img src="player3.jpg" class="player-img"></td><td>Player 3</td><td>Team C</td><td>980</td>
+            </tr>
+            <tr>
+                <td><img src="player4.jpg" class="player-img"></td><td>Player 4</td><td>Team D</td><td>980</td>
+            </tr>
+            <tr>
+                <td><img src="player5.jpg" class="player-img"></td><td>Player 5</td><td>Team E</td><td>980</td>
+            </tr>
+        </table>
+
+        <h2>Highest Four</h2>
+        <table>
+            <tr>
+                <th>Photo</th><th>Player Name</th><th>Team</th><th>Fours</th>
+            </tr>
+            <tr>
+                <td><img src="fours.jpg" class="player-img"></td><td>Player X</td><td>Team A</td><td>130</td>
+            </tr>
+            <tr>
+                <td><img src="fours.jpg" class="player-img"></td><td>Player X</td><td>Team B</td><td>130</td>
+            </tr>
+            <tr>
+                <td><img src="fours.jpg" class="player-img"></td><td>Player X</td><td>Team C</td><td>130</td>
+            </tr>
+            <tr>
+                <td><img src="fours.jpg" class="player-img"></td><td>Player X</td><td>Team D</td><td>130</td>
+            </tr>
+            <tr>
+                <td><img src="fours.jpg" class="player-img"></td><td>Player X</td><td>Team E</td><td>130</td>
+            </tr>
+        </table>
+
+        <h2>Highest Six Scorers</h2>
+        <table>
+            <tr>
+                <th>Photo</th><th>Player Name</th><th>Team</th><th>Sixes</th>
+            </tr>
+            <tr>
+                <td><img src="sixes.jpg" class="player-img"></td><td>Player 1</td><td>Team P</td><td>98</td>
+            </tr>
+            <tr>
+                <td><img src="sixes.jpg" class="player-img"></td><td>Player 2</td><td>Team P</td><td>98</td>
+            </tr>
+            <tr>
+                <td><img src="sixes.jpg" class="player-img"></td><td>Player 3</td><td>Team P</td><td>98</td>
+            </tr>
+            <tr>
+                <td><img src="sixes.jpg" class="player-img"></td><td>Player 4</td><td>Team P</td><td>98</td>
+            </tr>
+            <tr>
+                <td><img src="sixes.jpg" class="player-img"></td><td>Player 5</td><td>Team P</td><td>98</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">&copy; Copy rights all reserved. By ERAA4IT!</footer>
+
+    <!-- Chat Popup Box -->
     <div id="chatBox" class="chat-popup">
         <div class="chat-header">Support Chat</div>
         <p>Hello! How can we help you?</p>
@@ -65,11 +215,10 @@
     </div>
 
     <script>
-    function toggleChat() {
-        const box = document.getElementById("chatBox");
-        box.style.display = (box.style.display === "block") ? "none" : "block";
-    }
+        function toggleChat() {
+            const box = document.getElementById("chatBox");
+            box.style.display = (box.style.display === "block") ? "none" : "block";
+        }
     </script>
-    
 </body>
 </html>
