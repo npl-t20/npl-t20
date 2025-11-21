@@ -1,6 +1,17 @@
 [
   {
     "rank": 1,
+    "team": "Sudurpaschim Royals",
+    "shortName": "SPR",
+    "matches": 2,
+    "wins": 2,
+    "losses": 0,
+    "nr": 0,
+    "points": 4,
+    "nrr": "+1.450"
+  },
+  {
+    "rank": 2,
     "team": "Biratnagar Kings",
     "shortName": "BIK",
     "matches": 1,
@@ -9,17 +20,6 @@
     "nr": 0,
     "points": 2,
     "nrr": "+2.650"
-  },
-  {
-    "rank": 2,
-    "team": "Sudurpaschim Royals",
-    "shortName": "SPR",
-    "matches": 1,
-    "wins": 1,
-    "losses": 0,
-    "nr": 0,
-    "points": 2,
-    "nrr": "+1.450"
   },
   {
     "rank": 3,
@@ -80,9 +80,9 @@
     "rank": 8,
     "team": "Pokhara Avengers",
     "shortName": "POA",
-    "matches": 1,
+    "matches": 2,
     "wins": 0,
-    "losses": 1,
+    "losses": 2,
     "nr": 0,
     "points": 0,
     "nrr": "-2.650"
