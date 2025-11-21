@@ -576,6 +576,72 @@ body {
         height: 80px;
     }
 }
+<<<<<<< HEAD
+.table-representative { 
+    width: 20px; 
+    height: 15px; 
+    object-fit: cover;
+
+}
+/* ============================================================
+   ERAA TABLE SECTION
+   ============================================================ */
+
+.eraa-section {
+  padding: 0 300px;
+}
+
+/* Main table styling */
+#eraa-section table {
+    width: 50%;
+    margin: 150px auto;
+    border-collapse: collapse;
+    background: #ea0000;
+}
+
+/* Table header + cells */
+#eraa-section th,
+#eraa-section td {
+    padding: 8px 12px;
+    border: 1px solid #0707f6;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Header row */
+#eraa-section th {
+    background: #ff0000;
+    color: rgb(218, 6, 6);
+}
+
+/* Control table LENGTH (column widths) */
+#eraa-section td:nth-child(1),
+#eraa-section th:nth-child(1) {
+    width: 120px;
+}
+
+#eraa-section td:nth-child(2),
+#eraa-section th:nth-child(2) {
+    width: 150px;
+}
+
+#eraa-section td:nth-child(3),
+#eraa-section th:nth-child(3) {
+    width: 100px;
+}
+
+/* Control row HEIGHT */
+#eraa-section tr {
+    height: 36px;
+}
+
+/* Image inside table */
+#eraa-section .player-img {
+    width: 30px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+=======
 /* ============================================================
    SINGLE TEAM DETAIL PAGES (Lumbini Lions, other teams)
    ============================================================ */
@@ -779,4 +845,5 @@ body {
     .team-hero .team-name {
         font-size: 22px;
     }
+>>>>>>> 5e9210eb75c0ed0070e3fc69ddc102f5f2b307ab
 }
