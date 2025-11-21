@@ -12,6 +12,7 @@
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous"
     referrerpolicy="no-referrer">
+    <link rel="shortcut icon" type="image/png" href="assets/NPLLogo.jpg">
     <link rel="stylesheet" href="style.css">
     
 </head>
@@ -20,7 +21,7 @@
     <header class="header">
         <!-- Logo -->
         <div class="logo">
-            <img src="assets/NPLLogo.jpg" alt="Logo">
+            <a href="index.html"><img src="assets/NPLLogo.jpg" alt="Logo"></a>
         </div>
         <!-- Follow Us Section -->
         <div class="follow-us">
@@ -111,7 +112,7 @@
         }
 
         // Load Season 2 points table from local JSON
-        async function loadPointsTable() {
+        async function loadfixtureTable() {
             const tbody = document.getElementById("points-body");
             const loadingMsg = document.getElementById("points-loading");
             const errorMsg = document.getElementById("points-error");
@@ -159,7 +160,7 @@
             }
         }
 
-        document.addEventListener("DOMContentLoaded", loadPointsTable);
+        document.addEventListener("DOMContentLoaded", loadfixtureTable);
     </script>
 
 
