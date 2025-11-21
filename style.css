@@ -460,75 +460,30 @@ body {
 /*========================================
         style for fixtures table
 ======================================== */
+@media (max-width: 768px) {
+    .fixture-title {
+        font-size: 20px;
+        text-align: center;
+    }
 
-body {
-    font-family: Arial, sans-serif;
-    background: #f5f7fb;
-    margin: 0;
-    color: #222;
-}
+    .fixture-subtitle {
+        text-align: center;
+        font-size: 13px;
+    }
 
-h1 {
-    text-align: center;
-    margin-bottom: 18px;
-}
+    .fixture-table {
+        min-width: 550px;
+    }
 
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column; /* stack match boxes vertically */
-    gap: 16px; /* space between boxes */
-}
-
-.match-box {
-    background: white;
-    border-radius: 12px;
-    padding: 16px;
-    box-shadow: 0 6px 18px rgba(20, 30, 60, 0.08);
-    text-align: center;
-}
-
-.match-box h2 {
-    margin-top: 0;
-    margin-bottom: 12px;
-    font-size: 20px;
-}
-
-.teams {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 8px;
-    flex-wrap: wrap;
-}
-
-.team {
-    flex: 1;
-    background: rgba(155, 100, 100, 0.05);
-    padding: 8px;
-    border-radius: 8px;
-    font-weight: bold;
-    text-align: center;
-    min-width: 80px;
-}
-
-.vs {
-    font-weight: bold;
-    padding: 0 10px;
-    color: #666;
-}
-
-/* Responsive for small screens */
-@media (max-width: 420px) {
-    .teams {
-        flex-direction: column;
-        gap: 6px;
+    .fixture-table th,
+    .fixture-table td {
+        font-size: 13px;
+        padding: 8px 6px;
     }
 }
 
 /* ============================================================
-   TEAMS PAGE STYLING
+   TEAMS PAGE STYLING (teams.html grid)
    ============================================================ */
 
 .teams-section {
@@ -588,11 +543,12 @@ h1 {
 
 /* Team Logo Styling */
 .team-logo {
-    width: 90px;
-    height: 90px;
+    width: 120px;
+    height: 120px;
     object-fit: contain;
     margin-bottom: 6px;
     display: block;
+    padding-left: 30px;
 }
 
 /* Responsive grid for tablets and phones */
@@ -620,6 +576,7 @@ h1 {
         height: 80px;
     }
 }
+<<<<<<< HEAD
 .table-representative { 
     width: 20px; 
     height: 15px; 
@@ -684,4 +641,209 @@ h1 {
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
+=======
+/* ============================================================
+   SINGLE TEAM DETAIL PAGES (Lumbini Lions, other teams)
+   ============================================================ */
+
+/* Main wrapper */
+.team-detail-section {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+}
+
+/* Top hero section */
+.team-hero {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 16px;
+}
+
+/* Logo */
+.team-hero-logo .team-logo {
+    width: 150px;
+    height: 120px;
+    object-fit: contain;
+}
+
+/* Team big title */
+.team-hero .team-name {
+    font-size: 28px;
+    margin: 0 0 8px;
+    color: #dc143c;
+}
+
+/* Hero text */
+.team-hero-info p {
+    font-size: 14px;
+    margin: 2px 0;
+    color: #333;
+}
+
+/* Website link */
+.team-hero-info a {
+    color: #002366;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.team-hero-info a:hover {
+    text-decoration: underline;
+}
+
+/* Content boxes */
+.team-about,
+.team-management,
+.team-squad,
+.team-performance {
+    margin-top: 16px;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 12px 14px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+/* Section titles */
+.team-about h2,
+.team-management h2,
+.team-squad h2,
+.team-performance h2 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #002366;
+}
+
+/* Section paragraphs */
+.team-about p,
+.team-management p,
+.team-squad p,
+.team-performance p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+/* Notes */
+.team-detail-section .note {
+    font-size: 12px;
+    color: #777;
+    margin-top: 4px;
+}
+
+/* Lists */
+.team-management ul,
+.team-squad ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin: 6px 0 4px;
+}
+
+.team-management li,
+.team-squad li {
+    font-size: 14px;
+    margin: 2px 0;
+}
+
+/* ============================================================
+   PLAYER GRID & PLAYER CARDS
+   ============================================================ */
+
+.player-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin: 10px 0 18px;
+}
+
+.player-card {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 10px 12px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.player-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+
+.player-photo {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 6px;
+}
+
+.player-name {
+    font-size: 15px;
+    font-weight: bold;
+    color: #002366;
+    margin: 2px 0;
+}
+
+.player-role {
+    font-size: 13px;
+    font-weight: bold;
+    color: #dc143c;
+    margin: 2px 0;
+}
+
+/* ============================================================
+   RESPONSIVE FIXES (FULLY RESPONSIVE NOW)
+   ============================================================ */
+
+/* ✔ Tablet breakpoint – earlier stacking */
+@media (max-width: 900px) {
+    .team-hero {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .team-hero-logo {
+        align-self: center;
+    }
+
+    .team-hero .team-name {
+        font-size: 26px;
+    }
+}
+
+/* ✔ Mobile – smaller images and 2-column player grid */
+@media (max-width: 600px) {
+
+    .player-photo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .player-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ✔ Small phones – 1 player per row */
+@media (max-width: 480px) {
+    .player-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-hero .team-name {
+        font-size: 22px;
+    }
+>>>>>>> 5e9210eb75c0ed0070e3fc69ddc102f5f2b307ab
 }
