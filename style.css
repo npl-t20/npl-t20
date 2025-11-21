@@ -526,3 +526,97 @@ h1 {
         gap: 6px;
     }
 }
+
+/* ============================================================
+   TEAMS PAGE STYLING
+   ============================================================ */
+
+.teams-section {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+}
+
+.teams-title {
+    font-size: 24px;
+    margin-bottom: 6px;
+    color: #002366;
+    text-align: left;
+}
+
+.teams-subtitle {
+    font-size: 14px;
+    margin-bottom: 16px;
+    color: #555;
+}
+
+/* Grid for team cards */
+.teams-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+/* Individual team card */
+.team-card {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 12px 14px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    border: 1px solid #eee;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.team-name {
+    font-size: 18px;
+    margin: 8px 0 6px;
+    color: #dc143c;
+}
+
+/* Generic text inside team card */
+.team-card p {
+    font-size: 14px;
+    margin: 2px 0;
+    color: #333;
+}
+
+/* Team Logo Styling */
+.team-logo {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    margin-bottom: 6px;
+    display: block;
+}
+
+/* Responsive grid for tablets and phones */
+@media (max-width: 1024px) {
+    .teams-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .teams-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .teams-title {
+        text-align: center;
+    }
+
+    .teams-subtitle {
+        text-align: center;
+    }
+
+    .team-logo {
+        width: 80px;
+        height: 80px;
+    }
+}
