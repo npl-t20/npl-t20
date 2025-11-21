@@ -588,11 +588,12 @@ h1 {
 
 /* Team Logo Styling */
 .team-logo {
-    width: 90px;
-    height: 90px;
+    width: 120px;
+    height: 120px;
     object-fit: contain;
     margin-bottom: 6px;
     display: block;
+    padding-left: 30px;
 }
 
 /* Responsive grid for tablets and phones */
@@ -645,7 +646,7 @@ h1 {
 
 /* Logo */
 .team-hero-logo .team-logo {
-    width: 120px;
+    width: 150px;
     height: 120px;
     object-fit: contain;
 }
