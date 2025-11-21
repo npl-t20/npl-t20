@@ -621,7 +621,7 @@ h1 {
     }
 }
 /* ============================================================
-   SINGLE TEAM DETAIL PAGES 
+   SINGLE TEAM DETAIL PAGES (Lumbini Lions, other teams)
    ============================================================ */
 
 /* Main wrapper */
@@ -786,10 +786,8 @@ h1 {
    ============================================================ */
 
 /* ✔ Tablet breakpoint – earlier stacking */
-@media (min-width: 1440px)  {
+@media (max-width: 900px) {
     .team-hero {
-        margin: 0;
-        max-width: 100%;
         flex-direction: column;
         align-items: flex-start;
     }
