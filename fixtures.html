@@ -63,7 +63,7 @@
 
     <!-- Footer -->
     <footer class="footer">
-        &copy;Copy rights all reserved. By ERAA4IT!
+        &copy; Copy rights all reserved. By ERAA4IT!
     </footer>
 
     <!-- Chat Popup Box -->
@@ -88,7 +88,6 @@
     <!-- Fixtures Loader Script -->
     <script>
         async function loadfixtureTable() {
-
             const list = document.getElementById("fixture-list");
             const loadingMsg = document.getElementById("fixture-loading");
             const errorMsg = document.getElementById("fixture-error");
@@ -99,19 +98,22 @@
 
             try {
                 const response = await fetch("data/npl2025-fixtures.json");
-
                 if (!response.ok) throw new Error("Network response was not ok");
 
                 const data = await response.json();
                 loadingMsg.style.display = "none";
 
-                if (!Array.isArray(data) || data.length === 0) {
+                // Extract fixtures and links from JSON
+                const fixtures = data.fixtures || [];
+                const links = data.links || {};
+
+                if (fixtures.length === 0) {
                     errorMsg.textContent = "No fixture data available right now.";
                     errorMsg.style.display = "block";
                     return;
                 }
 
-                data.forEach(match => {
+                fixtures.forEach(match => {
                     const card = document.createElement("div");
                     card.className = "fixture-card";
 
@@ -129,12 +131,15 @@
                         } else if (runsB > runsA) {
                             colorB = "black";
                             colorA = "rgb(164, 160, 175)";
-                        }
-                        else{
-                            colorA= "black";
-                            colorB= "black";
+                        } else {
+                            colorA = "black";
+                            colorB = "black";
                         }
                     }
+
+                    // Make team names clickable if link exists
+                    const teamaLink = links[match.teama] || "#";
+                    const teambLink = links[match.teamb] || "#";
 
                     card.innerHTML = `
                         <div class="fixture-date">${match.date}</div>
@@ -142,14 +147,18 @@
 
                         <div class="fixture-teams">
                             <div class="team-block">
-                                <span class="team-name" style="color:${colorA}">${match.teama}</span>
+                                <a href="${teamaLink}" target="_blank" class="team-name" style="color:${colorA}">
+                                    ${match.teama}
+                                </a>
                                 <span class="team-score" style="color:${colorA}">${match.scorea || "-"}</span>
                             </div>
 
                             <span class="fixture-vs">vs</span>
 
                             <div class="team-block">
-                                <span class="team-name" style="color:${colorB}">${match.teamb}</span>
+                                <a href="${teambLink}" target="_blank" class="team-name" style="color:${colorB}">
+                                    ${match.teamb}
+                                </a>
                                 <span class="team-score" style="color:${colorB}">${match.scoreb || "-"}</span>
                             </div>
                         </div>
