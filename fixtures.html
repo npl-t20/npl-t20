@@ -2,159 +2,166 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-        <title>Nepal Premier League</title>
+    <title>Nepal Premier League</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Font Awesome -->
-    <!-- https://fontawesome.com/search  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <link rel="shortcut icon" type="image/png" href="assets/NPLLogo.jpg">
     <link rel="stylesheet" href="style.css">
-    
 </head>
+
 <body>
+
     <!-- Header Section -->
     <header class="header">
-        <!-- Logo -->
         <div class="logo">
             <a href="index.html"><img src="assets/NPLLogo.jpg" alt="Logo"></a>
         </div>
-        <!-- Follow Us Section -->
+
         <div class="follow-us">
             <h4>Follow us</h4>
             <a href="https://www.instagram.com/officialnplt20/profilecard/?igsh=MWQ4YmhiY3pjMWt4YQ==" target="_blank">
                 <i class="fa-brands fa-instagram"></i></a>
-            <a href="https://youtube.com/@officialnplt20?si=GuzBCHmQbulXNwYh" target="_blank">
+            <a href="https://youtube.com/@officialnplt20" target="_blank">
                 <i class="fa-brands fa-youtube"></i></a>
-                <a href="https://www.facebook.com/OfficialNPLT20?mibextid=LQQJ4d" target="_blank">
-                    <i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.facebook.com/OfficialNPLT20" target="_blank">
+                <i class="fa-brands fa-facebook"></i></a>
         </div>
     </header>
 
     <!-- Navbar Section -->
     <nav class="navbar">
-        <ul >
+        <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="fixtures.html">Fixtures</a></li>
+            <li><a class="active" href="fixtures.html">Fixtures</a></li>
             <li><a href="pointstable.html">Points Table</a></li>
             <li><a href="teams.html">Teams</a></li>
             <li><a href="stats.html">Stats</a></li>
         </ul>
     </nav>
 
-        <!--fixtures table-->
-    <!-- MAIN CONTENT: POINTS TABLE -->
+    <!-- MAIN CONTENT Fixture -->
     <main class="main-content">
         <section class="points-section">
+
             <h1 class="points-title">Nepal Premier League 2025 – Fixtures</h1>
-            <p class="points-subtitle">
-                <!-- Standings for NPL Season 2 (updated from local data file). -->
+
+            <!-- Fixture Card List -->
+            <div id="fixture-list" class="fixture-list"></div>
+
+            <p id="fixture-loading" class="points-message">Loading fixtures...</p>
+
+            <p id="fixture-error" class="points-message error-message" style="display:none;">
+                Could not load fixtures. Please try again later.
             </p>
 
-            <div class="points-table-wrapper">
-                <table class="points-table">
-                    <thead>
-                        <tr>
-                            <th>DATE</th>
-                            <th>MATCH</th>
-                            <th>Team A</th>
-                            <th>-</th>
-                            <th>Team B</th>
-                            <th>RESULT</th>
-                        </tr>
-                    </thead>
-                    <tbody id="points-body">
-                        <!-- Rows will be injected by JavaScript -->
-                    </tbody>
-                </table>
-            </div>
-
-            <p id="points-loading" class="points-message">Loading points table...</p>
-            <p id="points-error" class="points-message error-message" style="display: none;">
-                Could not load points table. Please try again later.
-            </p>
         </section>
     </main>
 
+    <!-- Footer -->
+    <footer class="footer">
+        &copy;Copy rights all reserved. By ERAA4IT!
+    </footer>
 
-
-    <!-- Footer Section  -->
-        <footer class="footer">
-            &copy;Copy rights all reserved. By ERAA4IT!
-          </footer>
-
-          <!-- Chat Popup Box -->
+    <!-- Chat Popup Box -->
     <div id="chatBox" class="chat-popup">
         <div class="chat-header">Support Chat</div>
         <p>Hello! How can we help you?</p>
     </div>
 
-    <!-- Circular Chat Button -->
+    <!-- Chat Button -->
     <div class="chat-button" onclick="toggleChat()">
         <i class="fa-solid fa-message"></i>
     </div>
 
-    <script>
-    function toggleChat() {
-        const box = document.getElementById("chatBox");
-        box.style.display = (box.style.display === "block") ? "none" : "block";
-    }
-    </script>
-
+    <!-- Chat Toggle -->
     <script>
         function toggleChat() {
             const box = document.getElementById("chatBox");
             box.style.display = (box.style.display === "block") ? "none" : "block";
         }
+    </script>
 
-        // Load Season 2 points table from local JSON
+    <!-- Fixtures Loader Script -->
+    <script>
         async function loadfixtureTable() {
-            const tbody = document.getElementById("points-body");
-            const loadingMsg = document.getElementById("points-loading");
-            const errorMsg = document.getElementById("points-error");
+
+            const list = document.getElementById("fixture-list");
+            const loadingMsg = document.getElementById("fixture-loading");
+            const errorMsg = document.getElementById("fixture-error");
 
             loadingMsg.style.display = "block";
             errorMsg.style.display = "none";
-            tbody.innerHTML = "";
+            list.innerHTML = "";
 
             try {
-                // IMPORTANT: this path must match folder structure
                 const response = await fetch("data/npl2025-fixtures.json");
 
-                if (!response.ok) {
-                    throw new Error("Network response was not ok");
-                }
+                if (!response.ok) throw new Error("Network response was not ok");
 
                 const data = await response.json();
-
                 loadingMsg.style.display = "none";
 
                 if (!Array.isArray(data) || data.length === 0) {
-                    errorMsg.textContent = "No points data available right now.";
+                    errorMsg.textContent = "No fixture data available right now.";
                     errorMsg.style.display = "block";
                     return;
                 }
 
-                data.forEach(team => {
-                    const tr = document.createElement("tr");
+                data.forEach(match => {
+                    const card = document.createElement("div");
+                    card.className = "fixture-card";
 
-                    tr.innerHTML = `
-                        <td>${team.date}</td>
-                        <td>${team.match}</td>
-                        <td>${team.teama}</td>
-                        <td>${team.round}</td>
-                        <td>${team.teamb}</td>
-                        <td>${team.result}</td>
+                    // Determine colors based on score comparison
+                    let colorA = "black";
+                    let colorB = "black";
+
+                    if (match.scorea && match.scoreb) {
+                        const runsA = parseInt(match.scorea.split('/')[0]);
+                        const runsB = parseInt(match.scoreb.split('/')[0]);
+
+                        if (runsA > runsB) {
+                            colorA = "black";
+                            colorB = "rgb(164, 160, 175)";
+                        } else if (runsB > runsA) {
+                            colorB = "black";
+                            colorA = "rgb(164, 160, 175)";
+                        }
+                        else{
+                            colorA= "black";
+                            colorB= "black";
+                        }
+                    }
+
+                    card.innerHTML = `
+                        <div class="fixture-date">${match.date}</div>
+                        <div class="fixture-match">${match.match}</div>
+
+                        <div class="fixture-teams">
+                            <div class="team-block">
+                                <span class="team-name" style="color:${colorA}">${match.teama}</span>
+                                <span class="team-score" style="color:${colorA}">${match.scorea || "-"}</span>
+                            </div>
+
+                            <span class="fixture-vs">vs</span>
+
+                            <div class="team-block">
+                                <span class="team-name" style="color:${colorB}">${match.teamb}</span>
+                                <span class="team-score" style="color:${colorB}">${match.scoreb || "-"}</span>
+                            </div>
+                        </div>
+
+                        <div class="fixture-result">${match.result}</div>
                     `;
 
-                    tbody.appendChild(tr);
+                    list.appendChild(card);
                 });
+
             } catch (err) {
-                console.error("Failed to load points table:", err);
+                console.error("Failed to load fixtures:", err);
                 loadingMsg.style.display = "none";
                 errorMsg.style.display = "block";
             }
@@ -162,7 +169,6 @@
 
         document.addEventListener("DOMContentLoaded", loadfixtureTable);
     </script>
-
 
 </body>
 </html>
