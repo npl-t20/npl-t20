@@ -566,10 +566,6 @@ body {
 
 /*========= Mobile Responsive =========*/
 @media (max-width: 768px) {
-    .header{
-        padding: 8px 10px;
-    }
-    
     .fixture-list {
         width: 250px;
         padding: 0 10px;
