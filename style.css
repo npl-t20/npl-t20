@@ -7,6 +7,10 @@ body, ul, li, a, img {
     box-sizing: border-box;
 }
 
+a{
+    text-decoration: none;
+}
+
 img, ul, li, body, header, nav, footer, div {
     max-width: 100%;
 }
