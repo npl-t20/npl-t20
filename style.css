@@ -785,33 +785,53 @@ body {
     }
 }
 
-/* ========================
-   RESPONSIVE TABLES 
-   ========================*/
-.table-wrapper {
-    width: 100%;
-    overflow-x: auto;
-}
-
+/* =======================
+     RESPONSIVE TABLES 
+   =======================*/
 table {
     width: 100%;
     border-collapse: collapse;
-    min-width: 500px; /* Prevents tables from shrinking too much */
+    table-layout: fixed; /* This forces all columns to shrink to fit */
 }
 
-/* MOBILE OPTIMIZATION */
+th, td {
+    border: 1px solid gray;
+    padding: 10px;
+    word-wrap: break-word; /* Break long text & prevent overflow */
+    text-align: center;
+}
+
+.player-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* MOBILE MODE */
 @media (max-width: 600px) {
+    
+    table {
+        width: 100%;
+        table-layout: fixed;
+    }
+
     th, td {
-        padding: 6px;
-        font-size: 14px;
+        padding: 5px;
+        font-size: 12px;   /* Shrinks text */
     }
 
     .player-img {
-        width: 45px;
-        height: 45px;
+        width: 40px;       /* Shrinks image */
+        height: 40px;
     }
 
     h2 {
-        font-size: 20px;
+        font-size: 18px;
     }
+}
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto; /* Enables horizontal scroll if needed */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
 }
