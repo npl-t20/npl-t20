@@ -1,11 +1,12 @@
-[
+{
+"fixtures": [
   {
     "date": "Mon, 17 Nov 2025",
     "teama": "Janakpur Bolts",
     "scorea": "130/6",
     "match": "Match 1",
     "round": "vs",
-    "teamb": "kathmandu Gorkhas",
+    "teamb": "Kathmandu Gorkhas",
     "scoreb": "131/5",
     "result": "kathmandu Gorkhas won by 5 wickets"
   },
@@ -38,7 +39,7 @@
     "scorea": "147",
     "match": "Match 4",
     "round": "vs",
-    "teamb": "kathmandu Gorkhas",
+    "teamb": "Kathmandu Gorkhas",
     "scoreb": "118",
     "result": "Sudhurpachim Royals won by 29 runs"
   },
@@ -82,7 +83,7 @@
     "scorea": "",
     "match": "Match 8",
     "round": "vs",
-    "teamb": "kathmandu Gorkhas",
+    "teamb": "Kathmandu Gorkhas",
     "scoreb": "",
     "result": "TBD"
   },
@@ -93,7 +94,7 @@
     "scorea": "",
     "match": "Match 9",
     "round": "vs",
-    "teamb": "Jankput Bolts",
+    "teamb": "Jankpur Bolts",
     "scoreb": "",
     "result": "TBD"
   },
@@ -159,7 +160,7 @@
     "scorea": "",
     "match": "Match 15",
     "round": "vs",
-    "teamb": "kathmandu Gorkhas",
+    "teamb": "Kathmandu Gorkhas",
     "scoreb": "",
     "result": "TBD"
   },
@@ -170,7 +171,7 @@
     "scorea": "",
     "match": "Match 16",
     "round": "vs",
-    "teamb": "karnali Yaks",
+    "teamb": "Karnali Yaks",
     "scoreb": "",
     "result": "TBD"
   },
@@ -192,7 +193,7 @@
     "scorea": "",
     "match": "Match 18",
     "round": "vs",
-    "teamb": "Jankput Bolts",
+    "teamb": "Jankpur Bolts",
     "scoreb": "",
     "result": "TBD"
   },
@@ -203,7 +204,7 @@
     "scorea": "",
     "match": "Match 18",
     "round": "vs",
-    "teamb": "kathmandu Gorkhas",
+    "teamb": "Kathmandu Gorkhas",
     "scoreb": "",
     "result": "TBD"
   },
@@ -214,7 +215,7 @@
     "scorea": "",
     "match": "Match 20",
     "round": "vs",
-    "teamb": "Jankput Bolts",
+    "teamb": "Jankpur Bolts",
     "scoreb": "",
     "result": "TBD"
   },
@@ -302,7 +303,7 @@
     "scorea": "",
     "match": "Match 28",
     "round": "vs",
-    "teamb": "karnali Yaks",
+    "teamb": "Karnali Yaks",
     "scoreb": "",
     "result": "TBD"
   },
@@ -350,4 +351,16 @@
     "scoreb": "",
     "result": "TBD"
   }
-]
+],
+
+ "links":{
+  "Janakpur Bolts": "https://www.nepalt20premierleague.com/teams-pages/janakpurbolts.html",
+  "Kathmandu Gorkhas": "https://www.nepalt20premierleague.com/teams-pages/kathmandugorkhas.html",
+  "Pokhara Avengers": "https://www.nepalt20premierleague.com/teams-pages/pokharaavengers.html",
+  "Karnali Yaks": "https://www.nepalt20premierleague.com/teams-pages/karnaliyaks.html",
+  "Biratnagar Kings": "https://www.nepalt20premierleague.com/teams-pages/biratnagarkings.html",
+  "Lumbini Lions": "https://www.nepalt20premierleague.com/teams-pages/lumbinilions.html",
+  "Chitwan lions": "https://www.nepalt20premierleague.com/teams-pages/chitwanrhinos.html",
+  "Sudhurpachim Royals": "https://www.nepalt20premierleague.com/teams-pages/sudurpaschimroyals.html"
+ }
+}
