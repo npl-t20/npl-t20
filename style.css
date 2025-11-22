@@ -566,10 +566,13 @@ body {
 
 /*========= Mobile Responsive =========*/
 @media (max-width: 768px) {
+    .fixture-section {
+    align-items: flex-start;
+    }
+
     .fixture-list {
         width: 250px;
         padding: 0 10px;
-        margin: 0 auto;
     }
 
     .fixture-card {
