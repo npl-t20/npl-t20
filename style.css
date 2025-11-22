@@ -784,3 +784,34 @@ body {
         font-size: 22px;
     }
 }
+
+/* ========================
+   RESPONSIVE TABLES 
+   ========================*/
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 500px; /* Prevents tables from shrinking too much */
+}
+
+/* MOBILE OPTIMIZATION */
+@media (max-width: 600px) {
+    th, td {
+        padding: 6px;
+        font-size: 14px;
+    }
+
+    .player-img {
+        width: 45px;
+        height: 45px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+}
