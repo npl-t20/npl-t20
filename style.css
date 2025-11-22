@@ -137,9 +137,8 @@ body {
    ============================================================ */
 
 .footer {
-    background-color: #002366;
+    background-color: #e4b3b0;
     font-size: 16px;
-    color: white;
     padding: 12px;
     text-align: center;
     margin-top: auto; /* Pushes footer to bottom */
@@ -493,7 +492,7 @@ body {
     gap: 6px;
     border-left: 5px solid #1a73e8;
     border-right: 5px solid #1a73e8;
-    width: 100%;
+    width: 80%;
 }
 
 /* Date */
@@ -567,9 +566,9 @@ body {
 /*========= Mobile Responsive =========*/
 @media (max-width: 768px) {
     .fixture-list {
-        width: 100%;
+        width: 180%;
         padding: 0 10px;
-        margin: 0 auto;
+        margin: 0
     }
 
     .fixture-card {
