@@ -464,27 +464,129 @@ body {
 /*========================================
         style for fixtures table
 ======================================== */
+/* Center the entire fixture section */
+.points-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Fixture Card List */
+.fixture-list {
+    width: 550px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Fixture Card */
+.fixture-card {
+    background: #ffffff;
+    padding: 15px 18px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    border-left: 5px solid #1a73e8;
+    border-right: 5px solid #1a73e8;
+    width: 100%;
+}
+
+/* Date */
+.fixture-date {
+    color: black;
+}
+
+/* Match Title */
+.fixture-match {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 auto;
+    color: black;
+}
+
+/* Teams + Score Row */
+.fixture-teams {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.team-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+}
+
+/* Team name - NOW BLACK */
+.team-name {
+    font-size: 18px;
+    color: black;
+}
+
+/* Team score - NOW BLACK */
+.team-score {
+    margin-top: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+}
+
+/* VS text */
+.fixture-vs {
+    opacity: 0.6;
+    font-size: 16px;
+    font-weight: normal;
+    color: black; /* BLACK VS */
+}
+
+/* Result */
+.fixture-result {
+    margin-top: 5px;
+    color: black;
+}
+
+/* Loading / error messages */
+.points-message {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.error-message {
+    color: #d32f2f;
+}
+
+/* Mobile Responsive */
 @media (max-width: 768px) {
-    .fixture-title {
-        font-size: 20px;
-        text-align: center;
+    .fixture-list {
+        width: 100%;
+        padding: 0 10px;
     }
 
-    .fixture-subtitle {
-        text-align: center;
-        font-size: 13px;
+    .fixture-card {
+        width: 100%;
     }
 
-    .fixture-table {
-        min-width: 550px;
+    .fixture-match {
+        font-size: 14px;
     }
 
-    .fixture-table th,
-    .fixture-table td {
-        font-size: 13px;
-        padding: 8px 6px;
+    .team-name {
+        font-size: 14px;
+    }
+
+    .team-score {
+        font-size: 12px;
     }
 }
+
 
 /* ============================================================
    TEAMS PAGE STYLING (teams.html grid)

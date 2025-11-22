@@ -2,53 +2,65 @@
   {
     "date": "Mon, 17 Nov 2025",
     "teama": "Janakpur Bolts",
-    "match": 1,
+    "scorea": "130/6",
+    "match": "Match 1",
     "round": "vs",
     "teamb": "kathmandu Gorkhas",
+    "scoreb": "131/5",
     "result": "kathmandu Gorkhas won by 5 wickets"
   },
 
     {
     "date": "Tue, 18 Nov 2025",
     "teama": "Karnali Yaks",
-    "match": 2,
+    "scorea": "166/3",
+    "match": "Match 2",
     "round": "vs",
     "teamb": "Chitwan Rhinos",
+    "scoreb": "171/6",
     "result": "Chitwan Rhinos won by 4 wickets"
   },
 
     {
     "date": "Tue, 18 Nov 2025",
     "teama": "Biratnagar Kings",
-    "match": 3,
+    "scorea": "220/6",
+    "match": "Match 3",
     "round": "vs",
     "teamb": "Pokhara Avengers",
+    "scoreb": "167",
     "result": "Biratnagar Kings won by 53 runs"
   },
 
     {
     "date": "Wed, 19 Nov 2025",
     "teama": "Sudhurpachim Royals",
-    "match": 4,
+    "scorea": "147",
+    "match": "Match 4",
     "round": "vs",
     "teamb": "kathmandu Gorkhas",
+    "scoreb": "118",
     "result": "Sudhurpachim Royals won by 29 runs"
   },
 
     {
     "date": "Thu, 20 Nov 2025",
     "teama": "Chitwan Rhinos",
-    "match": 5,
+    "scorea": "142/7",
+    "match": "Match 5",
     "round": "vs",
     "teamb": "Lumbini Lions",
+    "scoreb": "146/4",
     "result": "Lumbini Lions won by 6 wickets"
   },
 
     {
     "date": "Fri, 21 Nov 2025",
     "teama": "Sudhurpachim Royals",
-    "match": 6,
+    "scorea": "193/7",
+    "match": "Match 6",
     "round": "vs",
+    "scoreb": "175/8",
     "teamb": "Pokhara Avengers",
     "result": "TBD"
   },
@@ -56,234 +68,286 @@
   {
     "date": "Sat, 22 Nov 2025",
     "teama": "Karnali Yaks",
-    "match": 7,
+    "scorea": "161/1",
+    "match": "Match 7",
     "round": "vs",
     "teamb": "Lumbini Lions",
+    "scoreb": "156/8",
     "result": "TBD"
   },
 
   {
     "date": "Sat, 22 Nov 2025",
     "teama": "Biratnagar Kings",
-    "match": 8,
+    "scorea": "",
+    "match": "Match 8",
     "round": "vs",
     "teamb": "kathmandu Gorkhas",
+    "scoreb": "",
     "result": "TBD"
   },
 
   {
     "date": "Mon, 24 Nov 2025",
     "teama": "Biratnagar Kings",
-    "match": 9,
+    "scorea": "",
+    "match": "Match 9",
     "round": "vs",
     "teamb": "Jankput Bolts",
+    "scoreb": "",
     "result": "TBD"
   },
 
   {
     "date": "Mon, 24 Nov 2025",
     "teama": "Karnali Yaks",
-    "match": 10,
+    "scorea": "",
+    "match": "Match 10",
     "round": "vs",
     "teamb": "Sudhurpachim Royals",
+    "scoreb": "",
     "result": "TBD"
   },
 
   {
     "date": "Tue, 25 Nov 2025",
     "teama": "Kathmandu Gorkhas",
-    "match": 11,
+    "scorea": "",
+    "match": "Match 11",
     "round": "vs",
     "teamb": "Lumbini Lions",
+    "scoreb": "",
     "result": "TBD"
   },
 
   {
     "date": "Wed, 26 Nov 2025",
     "teama": "Biratnagar Kings",
-    "match": 12,
+    "scorea": "",
+    "match": "Match 12",
     "round": "vs",
     "teamb": "Chitwan Rhinos",
+    "scoreb": "",
     "result": "TBD"
   },
 
   {
     "date": "Thu, 27 Nov 2025",
     "teama": "Lumbini Lions",
-    "match": 13,
+    "scorea": "",
+    "match": "Match 13",
     "round": "vs",
     "teamb": "Sudhurpachim Royals",
+    "scoreb": "",
     "result": "TBD"
   },
 
   {
     "date": "Thu, 27 Nov 2025",
     "teama": "Janakpur Bolts",
-    "match": 14,
+    "scorea": "",
+    "match": "Match 14",
     "round": "vs",
     "teamb": "Pokhara Avengers",
+    "scoreb": "",
     "result": "TBD"
   },
 
   {
     "date": "Fri, 28 Nov 2025",
     "teama": "Chitwan Rhinos",
-    "match": 15,
+    "scorea": "",
+    "match": "Match 15",
     "round": "vs",
     "teamb": "kathmandu Gorkhas",
+    "scoreb": "",
     "result": "TBD"
   },
 
   {
     "date": "Fri, 28 Nov 2025",
     "teama": "Biratnagar Kings",
-    "match": 16,
+    "scorea": "",
+    "match": "Match 16",
     "round": "vs",
     "teamb": "karnali Yaks",
+    "scoreb": "",
     "result": "TBD"
   },
 
   {
     "date": "Sat, 29 Nov 2025",
     "teama": "Lumbini Lions",
-    "match": 17,
+    "scorea": "",
+    "match": "Match 17",
     "round": "vs",
     "teamb": "Pokhara Avengers",
+    "scoreb": "",
     "result": "TBD"
   },
 
   {
     "date": "Sat, 29 Nov 2025",
     "teama": "Sudhurpachim Royals",
-    "match": 18,
+    "scorea": "",
+    "match": "Match 18",
     "round": "vs",
     "teamb": "Jankput Bolts",
+    "scoreb": "",
     "result": "TBD"
   },
 
   {
     "date": "Sun, 30 Nov 2025",
     "teama": "Karnali Yaks",
-    "match": 19,
+    "scorea": "",
+    "match": "Match 18",
     "round": "vs",
     "teamb": "kathmandu Gorkhas",
+    "scoreb": "",
     "result": "TBD"
   },
 
   {
     "date": "Tue, 02 Dec 2025",
     "teama": "Chitwan Rhinos",
-    "match": 20,
+    "scorea": "",
+    "match": "Match 20",
     "round": "vs",
     "teamb": "Jankput Bolts",
+    "scoreb": "",
     "result": "TBD"
   },
 
   {
     "date": "Tue, 02 Dec 2025",
     "teama": "Karnali Yaks",
-    "match": 21,
+    "scorea": "",
+    "match": "Match 21",
     "round": "vs",
     "teamb": "Pokhara Avengers",
+    "scoreb": "",
     "result": "TBD"
   },
 
   {
     "date": "Wed, 03 Dec 2025",
     "teama": "Biratnagar Kings",
-    "match": 22,
+    "scorea": "",
+    "match": "Match 22",
     "round": "vs",
     "teamb": "Lumbini Lions",
+    "scoreb": "",
     "result": "TBD"
   },
 
   {
     "date": "Thu, 04 Dec 2025",
     "teama": "Kathmandu Gorkhas",
-    "match": 23,
+    "scorea": "",
+    "match": "Match 23",
     "round": "vs",
     "teamb": "Pokhara Avengers",
+    "scoreb": "",
     "result": "TBD"
   },
 
   {
     "date": "Thu, 04 Dec 2025",
     "teama": "Chitwan Rhinos",
-    "match": 24,
+    "scorea": "",
+    "match": "Match 24",
     "round": "vs",
     "teamb": "Sudhurpachim Royals",
+    "scoreb": "",
     "result": "TBD"
   },
 
   {
     "date": "Fri, 05 Dec 2025",
     "teama": "Janakpur Bolts",
-    "match": 25,
+    "scorea": "",
+    "match": "Match 25",
     "round": "vs",
     "teamb": "Lumbini Lions",
+    "scoreb": "",
     "result": "TBD"
   },
 
   {
     "date": "Sat, 06 Dec 2025",
     "teama": "Sudhurpachim Royals",
-    "match": 26,
+    "scorea": "",
+    "match": "Match 26",
     "round": "vs",
     "teamb": "Biratnagar Kings",
+    "scoreb": "",
     "result": "TBD"
   },
 
     {
     "date": "Sat, 06 Dec 2025",
     "teama": "Chitwan Rhinos",
-    "match": 27,
+    "scorea": "",
+    "match": "Match 27",
     "round": "vs",
     "teamb": "Pokhara Avengers",
+    "scoreb": "",
     "result": "TBD"
   },
 
   {
     "date": "Sun, 07 Dec 2025",
     "teama": "Janakpur Bolts",
-    "match": 28,
+    "scorea": "",
+    "match": "Match 28",
     "round": "vs",
     "teamb": "karnali Yaks",
+    "scoreb": "",
     "result": "TBD"
   },
 
   {
     "date": "Tue, 09 Dec 2025",
     "teama": "TBD",
+    "scorea": "",
     "match": "Qualifier 1",
     "round": "vs",
     "teamb": "TBD",
+    "scoreb": "",
     "result": "TBD"
   },
 
   {
     "date": "Wed, 10 Dec 2025",
     "teama": "TBD",
+    "scorea": "",
     "match": "Eliminator",
     "round": "vs",
     "teamb": "TBD",
+    "scoreb": "",
     "result": "TBD"
   },
 
     {
     "date": "Thu, 11 Dec 2025",
     "teama": "TBD",
+    "scorea": "",
     "match": "Qualifier 2",
     "round": "vs",
     "teamb": "TBD",
+    "scoreb": "",
     "result": "TBD"
   },
 
     {
     "date": "Sat, 13 Dec 2025",
     "teama": "TBD",
+    "scorea": "",
     "match": "Grand Final",
     "round": "vs",
     "teamb": "TBD",
+    "scoreb": "",
     "result": "TBD"
   }
 ]
