@@ -25,9 +25,9 @@
     "rank": 3,
     "team": "Lumbini Lions",
     "shortName": "LUL",
-    "matches": 1,
+    "matches": 2,
     "wins": 1,
-    "losses": 0,
+    "losses": 1,
     "nr": 0,
     "points": 2,
     "nrr": "+0.254"
@@ -58,11 +58,11 @@
     "rank": 6,
     "team": "Karnali Yaks",
     "shortName": "KAY",
-    "matches": 1,
-    "wins": 0,
+    "matches": 2,
+    "wins": 1,
     "losses": 1,
     "nr": 0,
-    "points": 0,
+    "points": 2,
     "nrr": "-0.622"
   },
   {
