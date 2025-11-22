@@ -11,6 +11,21 @@
 
     <link rel="shortcut icon" type="image/png" href="assets/NPLLogo.jpg">
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .title{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: black;
+        }
+
+        @media (max-width: 768px){
+            .title{
+            font-size: 14px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -43,11 +58,11 @@
         </ul>
     </nav>
 
+
     <!--- MAIN CONTENT Fixture --->
     <main class="main-content">
         <section class="fixture-section">
-
-            <h1 class="fixture-title">Nepal Premier League 2025 – Fixtures</h1>
+                <h1 class="title">Nepal Premier League 2025 Fixtures</h1>
 
             <!-- Fixture Card List -->
             <div id="fixture-list" class="fixture-list"></div>
