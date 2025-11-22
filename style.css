@@ -465,7 +465,7 @@ body {
         style for fixtures table
 ======================================== */
 /* Center the entire fixture section */
-.points-section {
+.fixture-section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -473,7 +473,7 @@ body {
 
 /* Fixture Card List */
 .fixture-list {
-    width: 550px;
+    width: 450px;
     max-width: 100%;
     display: flex;
     flex-direction: column;
@@ -554,7 +554,7 @@ body {
 }
 
 /* Loading / error messages */
-.points-message {
+.fixture-message {
     margin-top: 10px;
     font-size: 14px;
 }
@@ -563,7 +563,7 @@ body {
     color: #d32f2f;
 }
 
-/* Mobile Responsive */
+/*========= Mobile Responsive =========*/
 @media (max-width: 768px) {
     .fixture-list {
         width: 100%;
