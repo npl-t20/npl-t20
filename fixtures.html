@@ -13,46 +13,18 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-        .header, .navbar {
-            width: 100%;
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-
-        .navbar ul {
-            padding: 0;
-            margin: 0;
-            list-style: none;
-            display: flex;
-            flex-wrap: wrap;  /* allow wrapping on small screens */
-        }
-
-        .navbar li {
-            margin-right: 15px;
-        }
-
-    @media (max-width: 768px) {
-        .header, .navbar {
-            width: 100%;
-            padding-left: 0;
-            padding-right: 0;
-            box-sizing: border-box;
-        }
-        .header, .navbar ul {
-            margin: 0;
-        }
-        /* Remove any fixed width on logo or follow-us sections */
-        .header .logo, .header .follow-us {
-            width: auto;
-        }
-    }
-</style>
-
+        .main-content {
+        width: 90%;
+        max-width: 1100px;
+        margin: 20px auto;
+        padding: 0 16px;
+        font-family: Arial, sans-serif;
+}
+    </style>
 </head>
 
 <body>
-    <!-- Header Section -->
+     <!-- Header Section -->
     <header class="header">
         <div class="logo">
             <a href="index.html"><img src="assets/NPLLogo.jpg" alt="Logo"></a>
@@ -100,7 +72,7 @@
     </footer>
 
     <!-- back t top -->
-    <button id="backToTopBtn">🢁</button>
+    <button id="backToTopBtn">⬆</button>
 
 
     <!-- Chat Popup Box -->
@@ -223,13 +195,14 @@
         window.addEventListener("scroll", function () {
             const scrolled = window.scrollY;
 
-            if (scrolled > 200) {
-                backToTopBtn.style.display = "block";
-                chatButton.style.bottom = "80px";   // moves chat button above top button
-            } else {
-                backToTopBtn.style.display = "none";
-                chatButton.style.bottom = "20px";   // back to normal position
-            }
+        if (scrolled > 200) {
+            backToTopBtn.style.display = "block";
+            chatButton.style.bottom = "80px"; // moves chat button above top button
+        } 
+        else {
+            backToTopBtn.style.display = "none";
+            chatButton.style.bottom = "20px"; // back to normal position
+        }
         });
 
         backToTopBtn.addEventListener("click", function () {
