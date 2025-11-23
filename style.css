@@ -627,7 +627,7 @@ body {
 /*========= Mobile Responsive =========*/
 @media (max-width: 768px) {
     .fixture-section{
-        padding-left: 20%;
+        padding-left: 10%;
     }
     .fixture-list {
         width: 350px;
