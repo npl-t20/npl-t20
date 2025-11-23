@@ -12,6 +12,23 @@
     <link rel="shortcut icon" type="image/png" href="assets/NPLLogo.jpg">
     <link rel="stylesheet" href="style.css">
 
+    <style>
+    @media (max-width: 768px) {
+        .header, .navbar {
+            width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+            box-sizing: border-box;
+        }
+        .header, .navbar ul {
+            margin: 0;
+        }
+        /* Remove any fixed width on logo or follow-us sections */
+        .header .logo, .header .follow-us {
+            width: auto;
+        }
+    }
+</style>
 
 </head>
 
