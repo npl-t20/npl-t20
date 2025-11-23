@@ -484,7 +484,8 @@ body {
 .fixture-section {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    padding-left: 20%;
 }
 
 /* Fixture Card List */
@@ -625,13 +626,23 @@ body {
 
 /*========= Mobile Responsive =========*/
 @media (max-width: 768px) {
+    .fixture-section{
+        padding-left: 20%;
+    }
     .fixture-list {
-        width: 250px;
+        width: 350px;
         padding: 0 10px;
     }
 
     .fixture-card {
-        width: 250px;
+        width: 100%;
+        max-width: 350px;
+        padding: 20px;
+        font-size: 14px;
+    }
+
+    .team-block{
+        font-size: 8px;
     }
 
     .fixture-match {
@@ -639,35 +650,19 @@ body {
     }
 
     .team-name {
-        font-size: 10px;
+        font-size: 14px;
     }
 
     .team-score {
-        font-size: 5px;
+        font-size: 15px;
     }
 
-    #backToTopBtn {
-        width: 40px;
-        height: 40px;
-        font-size: 16px;
-        line-height: 40px;
-        bottom: 15px;
-        right: 15px;
+    .fixture-title{
+        font-size: 20px;
+        align-items: flex-start;
     }
 
-    .chat-button {
-        width: 40px;
-        height: 40px;
-        font-size: 18px;
-        bottom: 15px;
-        right: 15px;
-    }
-
-    body.scrolled .chat-button {
-        bottom: 65px !important;
-    }
 }
-
 
 
 /* ============================================================
