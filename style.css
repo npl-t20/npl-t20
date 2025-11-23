@@ -627,11 +627,12 @@ body {
 /*========= Mobile Responsive =========*/
 @media (max-width: 768px) {
     .fixture-section{
-        padding-left: 10%;
+        padding-left: 5%;
     }
     .fixture-list {
         width: 350px;
-        padding: 0 10px;
+        padding: 20 0px;
+        align-items: flex-start;
     }
 
     .fixture-card {
