@@ -13,6 +13,25 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
+        .header, .navbar {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;  /* allow wrapping on small screens */
+        }
+
+        .navbar li {
+            margin-right: 15px;
+        }
+
     @media (max-width: 768px) {
         .header, .navbar {
             width: 100%;
