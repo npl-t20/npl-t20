@@ -137,7 +137,8 @@ body {
    ============================================================ */
 
 .footer {
-    background-color: #e4b3b0;
+    background-color: #002366;
+    color: white;
     font-size: 16px;
     padding: 12px;
     text-align: center;
@@ -939,10 +940,34 @@ th, td {
     overflow-x: auto; /* Enables horizontal scroll if needed */
     -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
 
-    /* Table Header Styling */
 table th {
-    background-color: rgb(249, 162, 0)!important;
-    color: white !important;
+    color: white; /* keep text white */
 }
+
+/* Runs Table Header */
+.RUNS table th {
+    background: orange;
+}
+
+/* Wickets Table Header */
+.Wickets table th {
+    background: purple;
+}
+
+/* Fours Table Header */
+.Fours table th {
+    background: blue;
+}
+
+/* Sixes Table Header */
+.Sixes table th {
+    background: darkorchid;
+}
+
+/* Team Runs Table Header */
+.TeamRuns table th {
+    background: teal;
+}
+
 }
 
