@@ -20,6 +20,26 @@
             color: black;
         }
 
+        
+        .chat-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;        /* smaller width */
+            height: 50px;       /* smaller height */
+            background: #007bff;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 999;
+            transition: bottom 0.3s ease;
+            font-size: 20px;   /* icon size (lower this to make even smaller) */
+            padding: 0;        /* no extra padding */
+        }
+
         @media (max-width: 768px){
             html, body{
             overflow-x: hidden;
@@ -80,6 +100,10 @@
     <footer class="footer">
         Copyright &copy; NPL 2025 All Rights Reserved.
     </footer>
+
+    <!-- back t top -->>
+    <button id="backToTopBtn">🢁</button>
+
 
     <!-- Chat Popup Box -->
     <div id="chatBox" class="chat-popup">
@@ -193,6 +217,28 @@
 
         document.addEventListener("DOMContentLoaded", loadfixtureTable);
     </script>
+
+    <script>
+        const backToTopBtn = document.getElementById("backToTopBtn");
+        const chatButton = document.querySelector(".chat-button");
+
+        window.addEventListener("scroll", function () {
+            const scrolled = window.scrollY;
+
+            if (scrolled > 200) {
+                backToTopBtn.style.display = "block";
+                chatButton.style.bottom = "80px";   // moves chat button above top button
+            } else {
+                backToTopBtn.style.display = "none";
+                chatButton.style.bottom = "20px";   // back to normal position
+            }
+        });
+
+        backToTopBtn.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    </script>
+
 
 </body>
 </html>

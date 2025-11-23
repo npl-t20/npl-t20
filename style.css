@@ -581,6 +581,48 @@ body {
     color: #d32f2f;
 }
 
+#backToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;        /* set equal width & height */
+  height: 50px;       /* set equal width & height */
+  background-color: #8b8b8b;
+  color: white;
+  border: none;
+  border-radius: 50%; /* makes it a circle */
+  cursor: pointer;
+  font-size: 18px;
+  display: none;
+  z-index: 999;
+  text-align: center;
+  line-height: 30px;  /* centers the arrow vertically */
+}
+
+.chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;        /* smaller width */
+    height: 50px;       /* smaller height */
+    background: #007bff;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 999;
+    transition: bottom 0.3s ease;
+    font-size: 20px;   /* icon size (lower this to make even smaller) */
+    padding: 0;        /* no extra padding */
+}
+
+#backToTopBtn:hover {
+  opacity: 1;
+}
+
+
 /*========= Mobile Responsive =========*/
 @media (max-width: 768px) {
     .fixture-list {
@@ -603,6 +645,11 @@ body {
     .team-score {
         font-size: 5px;
     }
+
+    #backToTopBtn{
+        font-size: 14px;
+    }
+
 }
 
 
