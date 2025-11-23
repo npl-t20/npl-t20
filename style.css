@@ -626,7 +626,7 @@ body {
 /*========= Mobile Responsive =========*/
 @media (max-width: 768px) {
     .fixture-section{
-        align-items: flex-start;
+        align-items: center;
     }
     .fixture-list {
         width: 350px;
