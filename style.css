@@ -484,8 +484,7 @@ body {
 .fixture-section {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding-left: 20%;
+    align-items: center;
 }
 
 /* Fixture Card List */
@@ -627,7 +626,7 @@ body {
 /*========= Mobile Responsive =========*/
 @media (max-width: 768px) {
     .fixture-section{
-        padding-left: 0%;
+        align-items: flex-start;
     }
     .fixture-list {
         width: 350px;
@@ -637,7 +636,7 @@ body {
 
     .fixture-card {
         width: 100%;
-        max-width: 350px;
+        max-width: 280px;
         padding: 20px;
         font-size: 14px;
     }
@@ -651,6 +650,7 @@ body {
     }
 
     .team-name {
+        width: 100%;
         font-size: 14px;
     }
 
@@ -659,7 +659,7 @@ body {
     }
 
     .fixture-title{
-        font-size: 20px;
+        font-size: 19px;
         align-items: flex-start;
     }
 
