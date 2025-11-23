@@ -1,6 +1,17 @@
 [
   {
     "rank": 1,
+    "team": "Biratnagar Kings",
+    "shortName": "BIK",
+    "matches": 2,
+    "wins": 2,
+    "losses": 0,
+    "nr": 0,
+    "points": 4,
+    "nrr": "+2.03"
+  },
+  {
+    "rank": 2,
     "team": "Sudurpaschim Royals",
     "shortName": "SPR",
     "matches": 2,
@@ -8,29 +19,18 @@
     "losses": 0,
     "nr": 0,
     "points": 4,
-    "nrr": "+1.450"
-  },
-  {
-    "rank": 2,
-    "team": "Biratnagar Kings",
-    "shortName": "BIK",
-    "matches": 1,
-    "wins": 1,
-    "losses": 0,
-    "nr": 0,
-    "points": 2,
-    "nrr": "+2.650"
+    "nrr": "+1.18"
   },
   {
     "rank": 3,
-    "team": "Lumbini Lions",
-    "shortName": "LUL",
+    "team": "Karnali Yaks",
+    "shortName": "Yaks",
     "matches": 2,
     "wins": 1,
     "losses": 1,
     "nr": 0,
     "points": 2,
-    "nrr": "+0.254"
+    "nrr": "+1.77"
   },
   {
     "rank": 4,
@@ -41,29 +41,29 @@
     "losses": 1,
     "nr": 0,
     "points": 2,
-    "nrr": "+0.222"
+    "nrr": "-0.11"
   },
   {
     "rank": 5,
     "team": "Kathmandu Gorkhas",
     "shortName": "KAG",
-    "matches": 2,
+    "matches": 3,
     "wins": 1,
-    "losses": 1,
+    "losses": 2,
     "nr": 0,
     "points": 2,
-    "nrr": "-0.372"
+    "nrr": "-0.60"
   },
   {
     "rank": 6,
-    "team": "Karnali Yaks",
-    "shortName": "KAY",
+    "team": "Lumbini Lions",
+    "shortName": "LL",
     "matches": 2,
     "wins": 1,
     "losses": 1,
     "nr": 0,
     "points": 2,
-    "nrr": "-0.622"
+    "nrr": "-0.60"
   },
   {
     "rank": 7,
@@ -74,7 +74,7 @@
     "losses": 1,
     "nr": 0,
     "points": 0,
-    "nrr": "-0.778"
+    "nrr": "-0.78"
   },
   {
     "rank": 8,
@@ -85,6 +85,6 @@
     "losses": 2,
     "nr": 0,
     "points": 0,
-    "nrr": "-2.650"
+    "nrr": "-1.78"
   }
 ]
