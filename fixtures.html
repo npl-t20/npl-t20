@@ -270,6 +270,25 @@ async function loadfixtureTable() {
 document.addEventListener("DOMContentLoaded", loadfixtureTable);
 </script>
 
+<script>
+const backToTopBtn = document.getElementById("backToTopBtn");
+const chatButton = document.querySelector(".chat-button");
+
+window.addEventListener("scroll", function () {
+    const scrolled = window.scrollY;
+    if (scrolled > 200) {
+        backToTopBtn.style.display = "block";
+        chatButton.style.bottom = "80px";
+    } else {
+        backToTopBtn.style.display = "none";
+        chatButton.style.bottom = "20px";
+    }
+});
+
+backToTopBtn.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});
+</script>
 
 </body>
 </html>
