@@ -770,6 +770,12 @@ body {
         font-size: 14px;
     }
 
+    .fixture-teams{
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+    }
+
     .fixture-date-time{
         flex-direction: column;
         align-items: flex-start;
