@@ -7,7 +7,12 @@ body, ul, li, a, img {
     box-sizing: border-box;
 }
 
-a{
+a:visited {
+    text-decoration: none;
+    color: blue;
+}
+
+a {
     text-decoration: none;
 }
 
@@ -362,6 +367,7 @@ body {
         font-size: 14px;
         padding: 20px 20px 10px;
     }
+    
 }
 
 /* ============================================================
@@ -844,7 +850,7 @@ body {
     font-size: 24px;
     margin-bottom: 6px;
     color: #002366;
-    text-align: left;
+    text-align: center;
 }
 
 .teams-subtitle {
