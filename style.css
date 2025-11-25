@@ -760,7 +760,7 @@ body {
     .fixture-list {
         width: 350px;
         padding: 20 0px;
-        align-items: center;
+        align-items: flex-start;
     }
 
     .fixture-card {
