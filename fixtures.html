@@ -55,6 +55,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer">
 <main class="main-content">
 <section class="fixture-section">
     <h1 class="fixture-title">Nepal Premier League 2025 Fixtures</h1>
+    <div id="upcoming-match-card"></div>
 
     <div id="fixture-list" class="fixture-list"></div>
     <p id="fixture-loading" class="fixture-message">Loading fixtures...</p>
@@ -169,27 +170,68 @@ async function loadfixtureTable() {
             return;
         }
 
+        /* ========================
+           UPCOMING MATCH CARD
+        ========================= */
+        const now = new Date();
+        const upcomingMatch = fixtures
+            .map(m => ({ ...m, dateObj: parseNepal12HourTime(m.date, m.time) }))
+            .filter(m => m.dateObj > now)
+            .sort((a,b) => a.dateObj - b.dateObj)[0];
+
+        if (upcomingMatch) {
+            const localDate = upcomingMatch.dateObj.toLocaleDateString(undefined, { weekday:'short', day:'numeric', month:'short' });
+            const localTime = upcomingMatch.dateObj.toLocaleTimeString(undefined, { hour:'2-digit', minute:'2-digit', hour12:true });
+
+            const teamALink = links[upcomingMatch.teama] || "#";
+            const teamBLink = links[upcomingMatch.teamb] || "#";
+
+            // Create a top card for upcoming match
+            const upcomingCard = document.createElement("div");
+            upcomingCard.className = "fixture-card upcoming-match-card"; // can style differently via CSS
+            upcomingCard.innerHTML = `
+                <div class="upcoming-title">Upcoming Match</div>
+                <div class="fixture-date-time">
+                    <span>${localDate}</span>
+                    <span>${localTime} | Local ${upcomingMatch.time}</span>
+                </div>
+                <div class="fixture-match">${upcomingMatch.match}</div>
+                <div class="fixture-teams">
+                    <div class="team-block">
+                        <a href="${teamALink}" target="_blank" class="team-name" style="color:black">${upcomingMatch.teama}</a>
+                        <span class="team-score">${upcomingMatch.scorea || "-"}</span>
+                    </div>
+                    <span class="fixture-vs">vs</span>
+                    <div class="team-block">
+                        <a href="${teamBLink}" target="_blank" class="team-name" style="color:black">${upcomingMatch.teamb}</a>
+                        <span class="team-score">${upcomingMatch.scoreb || "-"}</span>
+                    </div>
+                </div>
+                <div class="fixture-result">${upcomingMatch.result}</div>
+            `;
+            list.appendChild(upcomingCard);
+        }
+
+        /* ========================
+           MAIN FIXTURE LIST (WITH WINNER/LOSER COLORS)
+        ========================= */
         fixtures.forEach(match => {
             const card = document.createElement("div");
             card.className = "fixture-card";
 
             const dateObj = parseNepal12HourTime(match.date, match.time);
-
-            // User local time
             const localDate = dateObj.toLocaleDateString(undefined, { weekday:'short', day:'numeric', month:'short', year:'numeric' });
             const localTime = dateObj.toLocaleTimeString(undefined, { hour:'2-digit', minute:'2-digit', hour12:true });
-
-            // Nepal time (as in JSON)
             const nepalTime = match.time;
 
-            // Color logic
+            // --- WINNER / LOSER COLOR LOGIC (UNCHANGED) ---
             let colorA = "black";
             let colorB = "black";
             if(match.scorea && match.scoreb){
                 const runsA = parseInt(match.scorea.split('/')[0]);
                 const runsB = parseInt(match.scoreb.split('/')[0]);
                 if(runsA > runsB){ colorA="black"; colorB="rgb(164,160,175)"; }
-                else if(runsB>runsA){ colorB="black"; colorA="rgb(164,160,175)"; }
+                else if(runsB > runsA){ colorB="black"; colorA="rgb(164,160,175)"; }
             }
 
             const teamaLink = links[match.teama] || "#";
@@ -228,25 +270,6 @@ async function loadfixtureTable() {
 document.addEventListener("DOMContentLoaded", loadfixtureTable);
 </script>
 
-<script>
-const backToTopBtn = document.getElementById("backToTopBtn");
-const chatButton = document.querySelector(".chat-button");
-
-window.addEventListener("scroll", function () {
-    const scrolled = window.scrollY;
-    if (scrolled > 200) {
-        backToTopBtn.style.display = "block";
-        chatButton.style.bottom = "80px";
-    } else {
-        backToTopBtn.style.display = "none";
-        chatButton.style.bottom = "20px";
-    }
-});
-
-backToTopBtn.addEventListener("click", function () {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-});
-</script>
 
 </body>
 </html>
