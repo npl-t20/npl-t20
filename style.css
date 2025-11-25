@@ -49,6 +49,11 @@ body {
     color: white;
     font-family: Arial, sans-serif;
     flex-wrap: wrap;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 /* Logo image */
@@ -103,6 +108,9 @@ body {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    position: fixed;
+    top: 70px;
+    z-index: 10000;
 }
 
 .navbar ul {
@@ -485,6 +493,7 @@ body {
     margin: 20px auto;
     padding: 0 16px;
     font-family: Arial, sans-serif;
+    margin-top: 150px;
 }
 
 /* ============================================================
