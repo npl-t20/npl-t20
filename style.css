@@ -765,9 +765,10 @@ body {
 
     .fixture-card {
         width: 100%;
-        max-width: 280px;
+        max-width: 290px;
         padding: 20px;
         font-size: 14px;
+        align-items: center;
     }
 
     .fixture-teams{
