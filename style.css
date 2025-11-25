@@ -362,6 +362,11 @@ body {
         font-size: 14px;
         padding: 20px 20px 10px;
     }
+
+    .table-wrapper {
+        padding: 12px 30px;
+
+    }
 }
 
 /* ============================================================
