@@ -1,260 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Nepal Premier League</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Nepal Premier League</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    crossorigin="anonymous" referrerpolicy="no-referrer">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+crossorigin="anonymous" referrerpolicy="no-referrer">
 
-    <link rel="shortcut icon" type="image/png" href="assets/NPLLogo.jpg">
-    <link rel="stylesheet" href="style.css">
-
-    <style>
-        .main-content {
-        width: 90%;
-        max-width: 1100px;
-        margin: 20px auto;
-        padding: 0 16px;
-        font-family: Arial, sans-serif;
-}
-    </style>
+<link rel="shortcut icon" type="image/png" href="assets/NPLLogo.jpg">
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-     <!-- Header Section -->
-    <header class="header">
-        <div class="logo">
-            <a href="index.html"><img src="assets/NPLLogo.jpg" alt="Logo"></a>
-        </div>
-        <div class="follow-us">
-            <h4>Follow us</h4>
-            <a href="https://www.instagram.com/officialnplt20/profilecard/?igsh=MWQ4YmhiY3pjMWt4YQ==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://youtube.com/@officialnplt20?si=GuzBCHmQbulXNwYh" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-            <a href="https://www.facebook.com/OfficialNPLT20?mibextid=LQQJ4d" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-        </div>
-    </header>
+<header class="header">
+    <div class="logo">
+        <a href="index.html"><img src="assets/NPLLogo.jpg" alt="Logo"></a>
+    </div>
+    <div class="follow-us">
+        <h4>Follow us</h4>
+        <a href="https://www.instagram.com/officialnplt20/profilecard/?igsh=MWQ4YmhiY3pjMWt4YQ==" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://youtube.com/@officialnplt20?si=GuzBCHmQbulXNwYh" target="_blank">
+            <i class="fa-brands fa-youtube"></i>
+        </a>
+        <a href="https://www.facebook.com/OfficialNPLT20?mibextid=LQQJ4d" target="_blank">
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+    </div>
+</header>
 
-    <!-- Navbar Section -->
-    <nav class="navbar">
-        <ul>
+<nav class="navbar">
+<ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="fixtures.html">Fixtures</a></li>
+    <li><a href="pointstable.html">Points Table</a></li>
+    <li><a href="teams.html">Teams</a></li>
+    <li><a href="stats.html">Stats</a></li>
+</ul>
+</nav>
+
+<main class="main-content">
+<section class="fixture-section">
+    <h1 class="fixture-title">Nepal Premier League 2025 Fixtures</h1>
+
+    <div id="fixture-list" class="fixture-list"></div>
+    <p id="fixture-loading" class="fixture-message">Loading fixtures...</p>
+    <p id="fixture-error" class="points-message error-message" style="display:none;">Could not load fixtures. Please try again later.</p>
+</section>
+</main>
+
+<footer class="footer">
+<div class="footer-container">
+    <div class="footer-col">
+        <h3 class="footer-title">Nepal Premier League</h3>
+        <p class="footer-text">
+            Hub for Nepal Premier League 2025 | fixtures, points table, stats and team details. Built with passion for Nepali cricket.
+        </p>
+    </div>
+
+    <div class="footer-col">
+        <h4 class="footer-title">Quick Links</h4>
+        <ul class="footer-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="fixtures.html">Fixtures</a></li>
             <li><a href="pointstable.html">Points Table</a></li>
             <li><a href="teams.html">Teams</a></li>
             <li><a href="stats.html">Stats</a></li>
         </ul>
-    </nav>
-
-
-    <!--- MAIN CONTENT Fixture --->
-    <main class="main-content">
-        <section class="fixture-section">
-                <h1 class="fixture-title">Nepal Premier League 2025 Fixtures</h1>
-
-            <!-- Fixture Card List -->
-            <div id="fixture-list" class="fixture-list"></div>
-
-            <p id="fixture-loading" class="fixture-message">Loading fixtures...</p>
-
-            <p id="fixture-error" class="points-message error-message" style="display:none;">
-                Could not load fixtures. Please try again later.
-            </p>
-
-        </section>
-    </main>
-
-    <!-- Footer Section  -->
-    <footer class="footer">
-          <div class="footer-container">
-          <!-- Column 1: Brand / About -->
-           <div class="footer-col">
-            <h3 class="footer-title">Nepal Premier League</h3>
-            <p class="footer-text">
-                Hub for Nepal Premier League 2025 | fixtures, points table,
-                stats and team details. Built with passion for Nepali cricket.
-            </p>
-          </div>
-
-        <!-- Column 2: Quick Links -->
-        <div class="footer-col">
-            <h4 class="footer-title">Quick Links</h4>
-            <ul class="footer-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="fixtures.html">Fixtures</a></li>
-                <li><a href="pointstable.html">Points Table</a></li>
-                <li><a href="teams.html">Teams</a></li>
-                <li><a href="stats.html">Stats</a></li>
-            </ul>
-        </div>
-
-        <!-- Column 3: Follow & Contact -->
-        <div class="footer-col">
-            <h4 class="footer-title">Stay Connected</h4>
-            <p class="footer-text">Follow official NPL accounts for live updates:</p>
-            <div class="footer-social">
-                <a href="https://www.instagram.com/officialnplt20/profilecard/?igsh=MWQ4YmhiY3pjMWt4YQ==" target="_blank" aria-label="Instagram">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="https://youtube.com/@officialnplt20?si=GuzBCHmQbulXNwYh" target="_blank" aria-label="YouTube">
-                    <i class="fa-brands fa-youtube"></i>
-                </a>
-                <a href="https://www.facebook.com/OfficialNPLT20?mibextid=LQQJ4d" target="_blank" aria-label="Facebook">
-                    <i class="fa-brands fa-facebook"></i>
-                </a>
-            </div>
-            <p class="footer-text small">
-                Designed & developed by <strong>ERAA4IT</strong>.
-            </p>
-          </div>
-        </div>
-
-       <div class="footer-bottom">
-        <span>&copy; 2025 Nepal Premier League. All rights reserved.</span>
-       </div>
-    </footer>
-
-    <!-- back t top -->
-    <button id="backToTopBtn">⬆</button>
-
-
-    <!-- Chat Popup Box -->
-    <div id="chatBox" class="chat-popup">
-        <div class="chat-header">Support Chat</div>
-        <p>Hello! How can we help you?</p>
     </div>
 
-    <!-- Chat Button -->
-    <div class="chat-button" onclick="toggleChat()">
-        <i class="fa-solid fa-message"></i>
+    <div class="footer-col">
+        <h4 class="footer-title">Stay Connected</h4>
+        <p class="footer-text">Follow official NPL accounts for live updates:</p>
+        <div class="footer-social">
+            <a href="https://www.instagram.com/officialnplt20/profilecard/?igsh=MWQ4YmhiY3pjMWt4YQ==" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://youtube.com/@officialnplt20?si=GuzBCHmQbulXNwYh" target="_blank">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://www.facebook.com/OfficialNPLT20?mibextid=LQQJ4d" target="_blank">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+        </div>
+        <p class="footer-text small">Designed & developed by <strong>ERAA4IT</strong>.</p>
     </div>
+</div>
 
-    <!-- Chat Toggle -->
-    <script>
-        function toggleChat() {
-            const box = document.getElementById("chatBox");
-            box.style.display = (box.style.display === "block") ? "none" : "block";
+<div class="footer-bottom">
+    <span>&copy; 2025 Nepal Premier League. All rights reserved.</span>
+</div>
+</footer>
+
+<button id="backToTopBtn">⬆</button>
+
+<div id="chatBox" class="chat-popup">
+    <div class="chat-header">Support Chat</div>
+    <p>Hello! How can we help you?</p>
+</div>
+
+<div class="chat-button" onclick="toggleChat()">
+    <i class="fa-solid fa-message"></i>
+</div>
+
+<script>
+function toggleChat() {
+    const box = document.getElementById("chatBox");
+    box.style.display = (box.style.display === "block") ? "none" : "block";
+}
+</script>
+
+<!-- Fixtures Loader Script with dual-time display -->
+<script>
+function parseNepal12HourTime(dateStr, timeStr) {
+    let [time, modifier] = timeStr.split(' ');
+    let [hours, minutes] = time.split(':').map(Number);
+
+    if(modifier === "PM" && hours < 12) hours += 12;
+    if(modifier === "AM" && hours === 12) hours = 0;
+
+    const [weekday, day, month, year] = dateStr.split(/,?\s+/);
+    const months = {Jan:0, Feb:1, Mar:2, Apr:3, May:4, Jun:5, Jul:6, Aug:7, Sep:8, Oct:9, Nov:10, Dec:11};
+
+    return new Date(Date.UTC(
+        Number(year),
+        months[month],
+        Number(day),
+        hours - 5,
+        minutes - 45
+    ));
+}
+
+async function loadfixtureTable() {
+    const list = document.getElementById("fixture-list");
+    const loadingMsg = document.getElementById("fixture-loading");
+    const errorMsg = document.getElementById("fixture-error");
+
+    loadingMsg.style.display = "block";
+    errorMsg.style.display = "none";
+    list.innerHTML = "";
+
+    try {
+        const response = await fetch("data/npl2025-fixtures.json");
+        if(!response.ok) throw new Error("Network response was not ok");
+
+        const data = await response.json();
+        loadingMsg.style.display = "none";
+
+        const fixtures = data.fixtures || [];
+        const links = data.links || {};
+
+        if(fixtures.length === 0){
+            errorMsg.textContent = "No fixture data available right now.";
+            errorMsg.style.display = "block";
+            return;
         }
-    </script>
 
-    <!-- Fixtures Loader Script -->
-    <script>
-        async function loadfixtureTable() {
-            const list = document.getElementById("fixture-list");
-            const loadingMsg = document.getElementById("fixture-loading");
-            const errorMsg = document.getElementById("fixture-error");
+        fixtures.forEach(match => {
+            const card = document.createElement("div");
+            card.className = "fixture-card";
 
-            loadingMsg.style.display = "block";
-            errorMsg.style.display = "none";
-            list.innerHTML = "";
+            const dateObj = parseNepal12HourTime(match.date, match.time);
 
-            try {
-                const response = await fetch("data/npl2025-fixtures.json");
-                if (!response.ok) throw new Error("Network response was not ok");
+            // User local time
+            const localDate = dateObj.toLocaleDateString(undefined, { weekday:'short', day:'numeric', month:'short', year:'numeric' });
+            const localTime = dateObj.toLocaleTimeString(undefined, { hour:'2-digit', minute:'2-digit', hour12:true });
 
-                const data = await response.json();
-                loadingMsg.style.display = "none";
+            // Nepal time (as in JSON)
+            const nepalTime = match.time;
 
-                // Extract fixtures and links from JSON
-                const fixtures = data.fixtures || [];
-                const links = data.links || {};
-
-                if (fixtures.length === 0) {
-                    errorMsg.textContent = "No fixture data available right now.";
-                    errorMsg.style.display = "block";
-                    return;
-                }
-
-                fixtures.forEach(match => {
-                    const card = document.createElement("div");
-                    card.className = "fixture-card";
-
-                    // Determine colors based on score comparison
-                    let colorA = "black";
-                    let colorB = "black";
-
-                    if (match.scorea && match.scoreb) {
-                        const runsA = parseInt(match.scorea.split('/')[0]);
-                        const runsB = parseInt(match.scoreb.split('/')[0]);
-
-                        if (runsA > runsB) {
-                            colorA = "black";
-                            colorB = "rgb(164, 160, 175)";
-                        } else if (runsB > runsA) {
-                            colorB = "black";
-                            colorA = "rgb(164, 160, 175)";
-                        } else {
-                            colorA = "black";
-                            colorB = "black";
-                        }
-                    }
-
-                    // Make team names clickable if link exists
-                    const teamaLink = links[match.teama] || "#";
-                    const teambLink = links[match.teamb] || "#";
-
-                    card.innerHTML = `
-                        <div class="fixture-date">${match.date}</div>
-                        <div class="fixture-match">${match.match}</div>
-
-                        <div class="fixture-teams">
-                            <div class="team-block">
-                                <a href="${teamaLink}" target="_blank" class="team-name" style="color:${colorA}">
-                                    ${match.teama}
-                                </a>
-                                <span class="team-score" style="color:${colorA}">${match.scorea || "-"}</span>
-                            </div>
-
-                            <span class="fixture-vs">vs</span>
-
-                            <div class="team-block">
-                                <a href="${teambLink}" target="_blank" class="team-name" style="color:${colorB}">
-                                    ${match.teamb}
-                                </a>
-                                <span class="team-score" style="color:${colorB}">${match.scoreb || "-"}</span>
-                            </div>
-                        </div>
-
-                        <div class="fixture-result">${match.result}</div>
-                    `;
-
-                    list.appendChild(card);
-                });
-
-            } catch (err) {
-                console.error("Failed to load fixtures:", err);
-                loadingMsg.style.display = "none";
-                errorMsg.style.display = "block";
+            // Color logic
+            let colorA = "black";
+            let colorB = "black";
+            if(match.scorea && match.scoreb){
+                const runsA = parseInt(match.scorea.split('/')[0]);
+                const runsB = parseInt(match.scoreb.split('/')[0]);
+                if(runsA > runsB){ colorA="black"; colorB="rgb(164,160,175)"; }
+                else if(runsB>runsA){ colorB="black"; colorA="rgb(164,160,175)"; }
             }
-        }
 
-        document.addEventListener("DOMContentLoaded", loadfixtureTable);
-    </script>
+            const teamaLink = links[match.teama] || "#";
+            const teambLink = links[match.teamb] || "#";
 
-    <script>
-        const backToTopBtn = document.getElementById("backToTopBtn");
-        const chatButton = document.querySelector(".chat-button");
+            card.innerHTML = `
+                <div class="fixture-date-time">
+                    <span class="fixture-date">${localDate}</span>
+                    <span class="fixture-time">${localTime} | Local ${nepalTime}</span>
+                </div>
+                <div class="fixture-match">${match.match}</div>
+                <div class="fixture-teams">
+                    <div class="team-block">
+                        <a href="${teamaLink}" target="_blank" class="team-name" style="color:${colorA}">${match.teama}</a>
+                        <span class="team-score" style="color:${colorA}">${match.scorea || "-"}</span>
+                    </div>
+                    <span class="fixture-vs">vs</span>
+                    <div class="team-block">
+                        <a href="${teambLink}" target="_blank" class="team-name" style="color:${colorB}">${match.teamb}</a>
+                        <span class="team-score" style="color:${colorB}">${match.scoreb || "-"}</span>
+                    </div>
+                </div>
+                <div class="fixture-result">${match.result}</div>
+            `;
 
-        window.addEventListener("scroll", function () {
-            const scrolled = window.scrollY;
-
-        if (scrolled > 200) {
-            backToTopBtn.style.display = "block";
-            chatButton.style.bottom = "80px"; // moves chat button above top button
-        } 
-        else {
-            backToTopBtn.style.display = "none";
-            chatButton.style.bottom = "20px"; // back to normal position
-        }
+            list.appendChild(card);
         });
 
-        backToTopBtn.addEventListener("click", function () {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-        });
-    </script>
+    } catch(err) {
+        console.error("Failed to load fixtures:", err);
+        loadingMsg.style.display = "none";
+        errorMsg.style.display = "block";
+    }
+}
 
+document.addEventListener("DOMContentLoaded", loadfixtureTable);
+</script>
+
+<script>
+const backToTopBtn = document.getElementById("backToTopBtn");
+const chatButton = document.querySelector(".chat-button");
+
+window.addEventListener("scroll", function () {
+    const scrolled = window.scrollY;
+    if (scrolled > 200) {
+        backToTopBtn.style.display = "block";
+        chatButton.style.bottom = "80px";
+    } else {
+        backToTopBtn.style.display = "none";
+        chatButton.style.bottom = "20px";
+    }
+});
+
+backToTopBtn.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});
+</script>
 
 </body>
 </html>
