@@ -675,6 +675,7 @@ body {
     font-weight: bold;
     width: 100%;
     overflow: hidden;
+    gap: 10px;
 }
 
 .team-block {
@@ -791,6 +792,7 @@ body {
 
 /*========= Mobile Responsive =========*/
 @media (max-width: 768px) {
+
     .fixture-section{
         align-items: center;
     }
@@ -811,7 +813,6 @@ body {
     .fixture-teams{
         display: flex;
         justify-content: center;
-        gap: 10px;
         flex-wrap: wrap;
     }
 
@@ -821,8 +822,9 @@ body {
         align-items: flex-start;
         font-size: 13px;
     }
+
     .team-block{
-        font-size: 8px;
+        font-size: 16px;
     }
 
     .fixture-match {
