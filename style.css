@@ -766,8 +766,8 @@ body {
   opacity: 1;
 }
 
-/* Upcoming Match Card */
-.upcoming-match-card {
+/* Apply your upcoming card styling to the actual card */
+.upcoming-highlight {
     width: 100%;
     max-width: 750px;
     background: #e6f0ff;
@@ -777,16 +777,17 @@ body {
     border-radius: 20px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.15);
     margin-bottom: 25px;
+
+    /* Important for correct scroll alignment below header/navbar */
+    scroll-margin-top: 160px;
 }
 
 .upcoming-title {
-    display: flex;
     font-size: 20px;
     font-weight: bold;
     color: #1a73e8;
     margin-bottom: 10px;
 }
-
 
 /*========= Mobile Responsive =========*/
 @media (max-width: 768px) {
