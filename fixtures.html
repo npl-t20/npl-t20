@@ -243,6 +243,22 @@ document.getElementById("fixtureNav")?.addEventListener("click", () => {
         if (m) m.scrollIntoView({ behavior: "smooth", block: "start" });
     }, 300);
 });
+document.addEventListener("DOMContentLoaded", function() {
+    const backToTopBtn = document.getElementById("backToTopBtn");
+
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 200) {
+            backToTopBtn.style.display = "block";
+        } else {
+            backToTopBtn.style.display = "none";
+        }
+    });
+
+    backToTopBtn.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+});
+
 </script>
 
 </body>
