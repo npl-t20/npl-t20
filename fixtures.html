@@ -19,24 +19,32 @@
     margin-top: 150px;
 }
 
-.upcoming-highlight {
-    width: 100%;
-    max-width: 750px;
-    background: #e6f0ff;
-    border-left: 10px solid #1a73e8;
-    border-right: 10px solid #1a73e8;
-    padding: 20px;
+/* Upcoming match card background and padding */
+.upcoming-card {
+    background-color: #bbe2ff; /* light blue */
     border-radius: 20px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    border-left: 5px solid #1a73e8;
+    border-right: 5px solid #1a73e8;
+    padding: 35px 19px 19px 19px; /* <-- increase top padding for badge */
     margin-bottom: 25px;
-    scroll-margin-top: 160px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    position: relative; /* needed for badge positioning */
 }
-.upcoming-title {
-    font-size: 20px;
+
+/* Upcoming badge on top-left */
+.upcoming-badge {
+    background: #1a73e8;
+    color: white;
+    padding: 3px 10px;
+    font-size: 12px;
     font-weight: bold;
-    color: #1a73e8;
-    margin-bottom: 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 10;
 }
+
 @media (max-width: 768px) {
     .upcoming-highlight{
         max-width: 320px;
@@ -81,7 +89,6 @@
 
 <footer class="footer">
           <div class="footer-container">
-          <!-- Column 1: Brand / About -->
            <div class="footer-col">
             <h3 class="footer-title">Nepal Premier League</h3>
             <p class="footer-text">
@@ -90,7 +97,6 @@
             </p>
           </div>
 
-        <!-- Column 2: Quick Links -->
         <div class="footer-col">
             <h4 class="footer-title">Quick Links</h4>
             <ul class="footer-links">
@@ -102,7 +108,6 @@
             </ul>
         </div>
 
-        <!-- Column 3: Follow & Contact -->
         <div class="footer-col">
             <h4 class="footer-title">Stay Connected</h4>
             <p class="footer-text">Follow official NPL accounts for live updates:</p>
@@ -165,7 +170,6 @@ document.addEventListener("DOMContentLoaded", function() {
 <!-- ===================== FIXTURES SCRIPT ==================== -->
 <script>
 function parseNepal12HourTime(dateStr, timeStr) {
-    // dateStr format expected similar to: "Wed, 21 Jan 2025" (weekday day mon year)
     let [time, modifier] = timeStr.split(' ');
     let [hours, minutes] = time.split(':').map(Number);
 
@@ -210,59 +214,58 @@ async function loadfixtureTable() {
             const card = document.createElement("div");
 
             const dateObj = parseNepal12HourTime(match.date, match.time);
+
+            // =====================
+            // LIVE MATCH LOGIC (4 HOURS)
+            // =====================
+            const fourHoursAfter = new Date(dateObj.getTime() + 4 * 60 * 60 * 1000);
+            const isLiveMatch = now >= dateObj && now <= fourHoursAfter;
+
             const isUpcoming = dateObj > now && !window._upcomingAssigned;
 
-            card.className = isUpcoming ? "fixture-card upcoming-highlight" : "fixture-card";
+            card.className = "fixture-card";
+
+            if (isLiveMatch) {
+                card.id = "liveMatch";
+            }
 
             if (isUpcoming) {
                 window._upcomingAssigned = true;
                 card.id = "upcomingMatch";
+                card.classList.add("upcoming-card");
             }
 
             const localDate = dateObj.toLocaleDateString(undefined, { weekday:'short', day:'numeric', month:'short', year:'numeric' });
             const localTime = dateObj.toLocaleTimeString(undefined, { hour:'2-digit', minute:'2-digit', hour12:true });
 
-            // --- Robust color logic & safe parsing ---
             let colorA = "black";
             let colorB = "black";
 
-            // Try to extract runs (before '/'), guard against '-' or missing
-            const runsA = match.scorea && typeof match.scorea === "string"
-                ? parseInt(match.scorea.split('/')[0], 10)
-                : NaN;
-            const runsB = match.scoreb && typeof match.scoreb === "string"
-                ? parseInt(match.scoreb.split('/')[0], 10)
-                : NaN;
+            const runsA = match.scorea ? parseInt(match.scorea.split('/')[0], 10) : NaN;
+            const runsB = match.scoreb ? parseInt(match.scoreb.split('/')[0], 10) : NaN;
 
-            // If both runs are valid numbers, decide winner/loser
             if (!isNaN(runsA) && !isNaN(runsB)) {
                 if (runsA > runsB) {
-                    colorA = "black";           // winner stays black
-                    colorB = "rgb(164,160,175)"; // loser grey
+                    colorB = "rgb(164,160,175)";
                 } else if (runsB > runsA) {
-                    colorB = "black";
                     colorA = "rgb(164,160,175)";
-                } else {
-                    // tie - keep both same color (black)
-                    colorA = "black";
-                    colorB = "black";
                 }
-            } else {
-                // If either score missing/invalid, keep default colors
-                colorA = "black";
-                colorB = "black";
             }
 
             const teamaLink = links[match.teama] || "#";
             const teambLink = links[match.teamb] || "#";
 
             card.innerHTML = `
-                ${isUpcoming ? `<div class="upcoming-title">Upcoming Match</div>` : ""}
+                ${isLiveMatch ? `<span class="badge live-badge">LIVE</span>` : ""}
+                ${isUpcoming ? `<span class="badge upcoming-badge">Upcoming</span>` : ""}
+
                 <div class="fixture-date-time">
                     <span>${localDate}</span>
                     <span style="color: #808080;">${localTime} | Local ${match.time}</span>
                 </div>
+
                 <div class="fixture-match">${match.match}</div>
+
                 <div class="fixture-teams">
                     <div class="team-block">
                         <a href="${teamaLink}" target="_blank" style="color:${colorA}; text-decoration: none;">${match.teama}</a>
@@ -274,17 +277,30 @@ async function loadfixtureTable() {
                         <span class="team-score" style="color:${colorB}">${match.scoreb || "-"}</span>
                     </div>
                 </div>
+
                 <div class="fixture-result">${match.result || ""}</div>
             `;
+
 
             list.appendChild(card);
         });
 
-        // Auto scroll to upcoming match
         setTimeout(() => {
-            const up = document.getElementById("upcomingMatch");
-            if (up) up.scrollIntoView({ behavior: "smooth", block: "start" });
+            const live = document.getElementById("liveMatch");
+
+            if (live) {
+                const y = live.getBoundingClientRect().top + window.pageYOffset - 120; 
+                window.scrollTo({ top: y, behavior: "smooth" });
+            } else {
+                const up = document.getElementById("upcomingMatch");
+                if (up) {
+                const y2 = up.getBoundingClientRect().top + window.pageYOffset - 120;
+                window.scrollTo({ top: y2, behavior: "smooth" });
+                }
+            }
         }, 400);
+
+
 
     } catch(err) {
         console.error("Failed to load fixtures:", err);
@@ -296,29 +312,15 @@ async function loadfixtureTable() {
 document.addEventListener("DOMContentLoaded", loadfixtureTable);
 </script>
 
-<!-- NAVBAR SMOOTH SCROLL -->
+<!-- NAVBAR SCROLL -->
 <script>
-document.getElementById("fixtureNav")?.addEventListener("click", () => {
-    setTimeout(() => {
-        const m = document.getElementById("upcomingMatch");
-        if (m) m.scrollIntoView({ behavior: "smooth", block: "start" });
-    }, 300);
-});
-document.addEventListener("DOMContentLoaded", function() {
-    const backToTopBtn = document.getElementById("backToTopBtn");
-
-    window.addEventListener("scroll", function () {
-        if (window.scrollY > 200) {
-            backToTopBtn.style.display = "block";
-        } else {
-            backToTopBtn.style.display = "none";
-        }
-    });
-
-    backToTopBtn.addEventListener("click", function () {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-});
+const live = document.getElementById("liveMatch");
+if (live) {
+    live.scrollIntoView({ behavior: "smooth", block: "start" });
+} else {
+    const up = document.getElementById("upcomingMatch");
+    if (up) up.scrollIntoView({ behavior: "smooth", block: "start" });
+}
 
 </script>
 
