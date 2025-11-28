@@ -640,8 +640,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: 6px;
-    border-left: 5px solid #1a73e8;
-    border-right: 5px solid #1a73e8;
+    border-left: 8px solid #1a73e8;
+    border-right: 8px solid #1a73e8;
     width: 100%;
     max-width: 750px;
     margin: 18px auto;
