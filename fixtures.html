@@ -45,6 +45,41 @@
     z-index: 10;
 }
 
+.live-card {
+    background-color: #ffffff; /* light blue */
+    border-radius: 20px;
+    border-left: 8px solid #1a73e8;
+    border-right: 8px solid #1a73e8;
+    padding: 35px 19px 19px 19px; /* <-- increase top padding for badge */
+    margin-bottom: 25px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    position: relative;
+}
+
+/* LIVE BADGE */
+.live-badge {
+    background: red;
+    animation: pulse 1s infinite alternate; /* <-- animation applied */
+    color: white;
+    padding: 3px 10px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    position: absolute; /* <-- you forgot this */
+    top: 12px;
+    left: 12px;
+    z-index: 10;
+}
+
+/* ANIMATION KEYFRAMES */
+@keyframes pulse {
+    100% { 
+        opacity: 0.6;
+    }
+}
+
+
+
 @media (max-width: 768px) {
     .upcoming-highlight{
         max-width: 320px;
@@ -227,6 +262,7 @@ async function loadfixtureTable() {
 
             if (isLiveMatch) {
                 card.id = "liveMatch";
+                card.classList.add("live-card");
             }
 
             if (isUpcoming) {
