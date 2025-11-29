@@ -103,7 +103,7 @@
     "scorea": "135/7",
     "match": "Match 9",
     "round": "vs",
-    "teamb": "Jankpur Bolts",
+    "teamb": "Janakpur Bolts",
     "scoreb": "126/9",
     "result": "Biratnagar Kings won by 9 runs"
   },
@@ -196,12 +196,12 @@
     "date": "Sat, 29 Nov 2025",
     "time": "11:15 AM",
     "teama": "Lumbini Lions",
-    "scorea": "",
+    "scorea": "151/7",
     "match": "Match 17",
     "round": "vs",
     "teamb": "Pokhara Avengers",
-    "scoreb": "",
-    "result": "TBD"
+    "scoreb": "150/5",
+    "result": "Lumbini Lions won by 3 wickets"
   },
 
   {
@@ -211,7 +211,7 @@
     "scorea": "",
     "match": "Match 18",
     "round": "vs",
-    "teamb": "Jankpur Bolts",
+    "teamb": "Janakpur Bolts",
     "scoreb": "",
     "result": "TBD"
   },
@@ -235,7 +235,7 @@
     "scorea": "",
     "match": "Match 20",
     "round": "vs",
-    "teamb": "Jankpur Bolts",
+    "teamb": "Janakpur Bolts",
     "scoreb": "",
     "result": "TBD"
   },
@@ -392,7 +392,7 @@
   "Karnali Yaks": "https://www.nepalt20premierleague.com/teams-pages/karnaliyaks.html",
   "Biratnagar Kings": "https://www.nepalt20premierleague.com/teams-pages/biratnagarkings.html",
   "Lumbini Lions": "https://www.nepalt20premierleague.com/teams-pages/lumbinilions.html",
-  "Chitwan lions": "https://www.nepalt20premierleague.com/teams-pages/chitwanrhinos.html",
+  "Chitwan Rhinos": "https://www.nepalt20premierleague.com/teams-pages/chitwanrhinos.html",
   "Sudhurpachim Royals": "https://www.nepalt20premierleague.com/teams-pages/sudurpaschimroyals.html"
  }
 }
