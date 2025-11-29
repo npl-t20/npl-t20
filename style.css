@@ -772,25 +772,6 @@ body {
   opacity: 1;
 }
 
-/* BADGE POSITIONED TOP-LEFT */
-.badge {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    padding: 3px 10px;
-    font-size: 12px;
-    font-weight: bold;
-    color: white;
-    border-radius: 5px;
-    z-index: 3; /* ensure it stays above card background */
-}
-
-/* LIVE AND UPCOMING COLORS */
-.live-badge {
-    background: red;
-    animation: pulse 1s infinite alternate;
-}
-
 
 /*========= Mobile Responsive =========*/
 @media (max-width: 768px) {
