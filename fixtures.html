@@ -59,7 +59,7 @@
 /* LIVE BADGE */
 .live-badge {
     background: red;
-    animation: pulse 1s infinite alternate; /* <-- animation applied */
+    animation: pulse 0.8s infinite alternate; /* <-- animation applied */
     color: white;
     padding: 3px 10px;
     font-size: 15px;
@@ -74,7 +74,7 @@
 /* ANIMATION KEYFRAMES */
 @keyframes pulse {
     100% { 
-        opacity: 0.6;
+        opacity: 0.4;
     }
 }
 
@@ -205,22 +205,25 @@ document.addEventListener("DOMContentLoaded", function() {
 <!-- ===================== FIXTURES SCRIPT ==================== -->
 <script>
 function parseNepal12HourTime(dateStr, timeStr) {
-    let [time, modifier] = timeStr.split(' ');
-    let [hours, minutes] = time.split(':').map(Number);
+    const [_, day, monthName, year] =
+        dateStr.replace(',', '').split(' ');
 
-    if(modifier === "PM" && hours < 12) hours += 12;
-    if(modifier === "AM" && hours === 12) hours = 0;
+    const months = {
+        Jan: 0, Feb: 1, Mar: 2, Apr: 3, May: 4, Jun: 5,
+        Jul: 6, Aug: 7, Sep: 8, Oct: 9, Nov: 10, Dec: 11
+    };
 
-    const [weekday, day, month, year] = dateStr.split(/,?\s+/);
-    const months = {Jan:0, Feb:1, Mar:2, Apr:3, May:4, Jun:5, Jul:6, Aug:7, Sep:8, Oct:9, Nov:10, Dec:11};
+    let [hm, modifier] = timeStr.split(" ");
+    let [hours, minutes] = hm.split(":").map(Number);
 
-    return new Date(Date.UTC(
-        Number(year),
-        months[month],
-        Number(day),
-        hours - 5,
-        minutes - 45
-    ));
+    if (modifier === "PM" && hours !== 12) hours += 12;
+    if (modifier === "AM" && hours === 12) hours = 0;
+
+    // Build a Date in Nepal Time using ISO → ALWAYS SAFE
+    // YYYY-MM-DDTHH:mm+05:45
+    const iso = `${year}-${String(months[monthName] + 1).padStart(2, "0")}-${String(day).padStart(2,"0")}T${String(hours).padStart(2,"0")}:${String(minutes).padStart(2,"0")}:00+05:45`;
+
+    return new Date(iso); // Auto converts to local timezone correctly
 }
 
 async function loadfixtureTable() {
