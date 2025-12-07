@@ -304,24 +304,24 @@
     "date": "Sat, 06 Dec 2025",
     "time": "11:15 AM",
     "teama": "Sudhurpachim Royals",
-    "scorea": "",
+    "scorea": "147/6",
     "match": "Match 26",
     "round": "vs",
     "teamb": "Biratnagar Kings",
-    "scoreb": "",
-    "result": "TBD"
+    "scoreb": "150/4",
+    "result": "Biratnagar Kings won by 6 wickets"
   },
 
     {
     "date": "Sat, 06 Dec 2025",
     "time": "3:30 PM",
     "teama": "Chitwan Rhinos",
-    "scorea": "",
+    "scorea": "120/6",
     "match": "Match 27",
     "round": "vs",
     "teamb": "Pokhara Avengers",
-    "scoreb": "",
-    "result": "TBD"
+    "scoreb": "121/2",
+    "result": "Pokhara Avengers won by 8 wickets"
   },
 
   {
@@ -339,11 +339,11 @@
   {
     "date": "Tue, 09 Dec 2025",
     "time": "4:00 PM",
-    "teama": "TBD",
+    "teama": "Sudhurpachim Royals",
     "scorea": "",
     "match": "Qualifier 1",
     "round": "vs",
-    "teamb": "TBD",
+    "teamb": "Biratnagar Kings",
     "scoreb": "",
     "result": "TBD"
   },
@@ -352,10 +352,10 @@
     "date": "Wed, 10 Dec 2025",
     "time": "4:00 PM",
     "teama": "TBD",
-    "scorea": "",
+    "scorea": "Kathmandu Gorkhas",
     "match": "Eliminator",
     "round": "vs",
-    "teamb": "TBD",
+    "teamb": "Lumbini Lions",
     "scoreb": "",
     "result": "TBD"
   },
